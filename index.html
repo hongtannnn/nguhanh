@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ngũ Hành Self-Care Box | Nghi thức chăm sóc cảm xúc 15 phút mỗi ngày</title>
+<meta name="description" content="Ngũ Hành Self-Care Box – Bộ nghi thức chăm sóc cảm xúc tại nhà. Trà thảo mộc, Aroma Spray, Emotional Journal và Web Check-in cảm xúc. 15 phút để trở về với chính mình.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">
+    <svg class="nav-logo-icon" viewBox="0 0 40 40" fill="none">
+      <circle cx="20" cy="20" r="18.5" stroke="currentColor" stroke-width="1.2" opacity=".5"/>
+      <circle cx="20" cy="8" r="2" fill="currentColor"/>
+      <path d="M20 10 Q28 20 20 30 Q12 20 20 10Z" stroke="currentColor" stroke-width="1" fill="currentColor" fill-opacity=".15"/>
+      <path d="M10 28 Q20 22 30 28" stroke="currentColor" stroke-width="1" fill="none" opacity=".45"/>
+    </svg>
+    Ngũ Hành
+  </a>
+  <ul class="nav-links">
+    <li><a href="#cauchuyen">Câu chuyện</a></li>
+    <li><a href="#nghithuc">Nghi thức</a></li>
+    <li><a href="#tronghop">Trong hộp</a></li>
+    <li><a href="#nguhanh">Ngũ Hành</a></li>
+    <li><a href="#checkin">Check-in</a></li>
+    <li><a href="#banggia">Bảng giá</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="nav-btn-login" onclick="openLogin()">Đăng nhập</button>
+    <button class="nav-cart" id="navCartBtn" onclick="openCart()" title="Giỏ hàng">
+      <svg width="17" height="17" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+      <span class="cart-badge" id="cartBadge">0</span>
+    </button>
+    <a href="#banggia" class="nav-btn-cta">Đặt hộp ngay</a>
+    <button class="nav-hamburger" id="hamburgerBtn">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="closeMobileMenu()">✕</button>
+  <a href="#cauchuyen" onclick="closeMobileMenu()" class="mobile-menu-link">Câu chuyện</a>
+  <a href="#nghithuc" onclick="closeMobileMenu()" class="mobile-menu-link">Nghi thức 15 phút</a>
+  <a href="#tronghop" onclick="closeMobileMenu()" class="mobile-menu-link">Trong hộp</a>
+  <a href="#nguhanh" onclick="closeMobileMenu()" class="mobile-menu-link">Ngũ Hành</a>
+  <a href="#checkin" onclick="closeMobileMenu()" class="mobile-menu-link">Check-in cảm xúc</a>
+  <a href="#banggia" onclick="closeMobileMenu()" class="mobile-menu-link">Bảng giá</a>
+  <a href="#faq" onclick="closeMobileMenu()" class="mobile-menu-link">FAQ</a>
+  <a href="#banggia" onclick="closeMobileMenu()" class="mobile-cta">Đặt hộp ngay →</a>
+</div>
+
+<!-- HERO -->
+<header id="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-pill"><span class="hero-pill-dot"></span>Trạm sạc cảm xúc · Ra mắt 2026</div>
+    <h1 class="hero-h1">15 phút mỗi ngày<br>để trở về với <em>chính mình.</em></h1>
+    <p class="hero-p">Ngũ Hành Self-Care Box là bộ nghi thức chăm sóc cảm xúc tại nhà. Một tách trà, một hơi hương thảo mộc, một trang journal — đủ để bạn ngắt kết nối và về lại với bản thân.</p>
+    <div class="hero-actions">
+      <a href="#banggia" class="btn-primary">Đặt hộp đầu tiên · từ 690K <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg></a>
+      <a href="#nghithuc" class="btn-outline">Xem nghi thức 15 phút</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><div class="hero-scroll-bar"></div>Scroll</div>
+</header>
+
+<!-- MARQUEE -->
+<div class="marquee-strip" aria-hidden="true">
+  <div class="marquee-track">
+    <div class="marquee-item"><span class="m-dot"></span>Mộc · CALM · Thư giãn<span class="m-dot"></span>Hỏa · RELEASE · Giải tỏa<span class="m-dot"></span>Thổ · BALANCE · Cân bằng<span class="m-dot"></span>Kim · COMFORT · Xoa dịu<span class="m-dot"></span>Thủy · RESTORE · Phục hồi<span class="m-dot"></span>15-Minute Ritual<span class="m-dot"></span>100% Vietnamese Herbs<span class="m-dot"></span>Vegan · Cruelty-Free&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+    <div class="marquee-item"><span class="m-dot"></span>Mộc · CALM · Thư giãn<span class="m-dot"></span>Hỏa · RELEASE · Giải tỏa<span class="m-dot"></span>Thổ · BALANCE · Cân bằng<span class="m-dot"></span>Kim · COMFORT · Xoa dịu<span class="m-dot"></span>Thủy · RESTORE · Phục hồi<span class="m-dot"></span>15-Minute Ritual<span class="m-dot"></span>100% Vietnamese Herbs<span class="m-dot"></span>Vegan · Cruelty-Free&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+  </div>
+</div>
+
+<!-- CÂU CHUYỆN -->
+<section id="cauchuyen">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-img-wrap fade-up">
+        <img src="photos/2.jpg" alt="Ngũ Hành Self-Care Box" class="story-img-main">
+        <img src="photos/journal.jpg" alt="Journal" class="story-img-float">
+        <div class="story-badge"><strong>15'</strong>Ritual<br>mỗi ngày</div>
+      </div>
+      <div class="story-text fade-up" style="transition-delay:.15s">
+        <div class="section-tag">Câu chuyện</div>
+        <h2>Từ <em>cân bằng vạn vật</em><br>đến cân bằng chính mình.</h2>
+        <p>Trong tư tưởng phương Đông, Ngũ Hành gắn với quan niệm về sự vận động, tương tác và cân bằng giữa các yếu tố để duy trì trạng thái hài hòa của vạn vật — Mộc, Hỏa, Thổ, Kim, Thủy.</p>
+        <p>Từ góc nhìn đó, dự án nhận thấy sự tương đồng sâu sắc với vấn đề mà người trẻ ngày nay đang đối diện: giữa nhịp sống nhanh, nhiều áp lực và những biến động cảm xúc không ngừng — nhu cầu tìm lại sự cân bằng bên trong ngày càng trở nên rõ nét hơn bao giờ hết.</p>
+        <blockquote class="story-quote">"Chúng mình không tạo ra sản phẩm giúp chữa stress. Chúng mình tạo ra một khoảng dừng ngắn — đủ để bạn nhận ra mình đang cảm thấy gì."</blockquote>
+        <p>Chính điểm giao thoa này trở thành nền tảng để Ngũ Hành được phát triển thành câu chuyện thương hiệu — kết nối một tư tưởng truyền thống với nhu cầu chăm sóc cảm xúc đương đại.</p>
+        <a href="#nghithuc" class="btn-primary" style="margin-top:28px">Khám phá nghi thức 15 phút <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NGHI THỨC -->
+<section id="nghithuc">
+  <div class="ritual-bg-dots"></div>
+  <div class="container">
+    <div class="ritual-hdr fade-up">
+      <div class="section-tag">Nghi thức</div>
+      <h2>15 phút. 6 bước.<br><em>Một hành trình thống nhất.</em></h2>
+      <p>Không phải checklist, không phải nhiệm vụ. Đây là một chuỗi trải nghiệm được thiết kế để đưa bạn từ trạng thái bồn chồn về lại với chính mình.</p>
+    </div>
+    <div class="ritual-grid">
+      <div class="ritual-card fade-up"><span class="r-num">01</span><div class="r-icon">🪷</div><div class="r-time">Phút 1–2</div><h3 class="r-title">Check-in</h3><p class="r-desc">Quét QR, trả lời 3 câu hỏi ngắn. Hệ thống gợi ý dòng trà Ngũ Hành phù hợp nhất với trạng thái cảm xúc hôm nay của bạn.</p></div>
+      <div class="ritual-card fade-up" style="transition-delay:.08s"><span class="r-num">02</span><div class="r-icon">🍵</div><div class="r-time">Phút 2–7</div><h3 class="r-title">Brew & Disconnect</h3><p class="r-desc">Pha trà, đặt điện thoại xuống. Theo dõi nước sôi, mùi thảo mộc lan tỏa — tín hiệu để cơ thể biết: đã đến giờ nghỉ ngơi.</p></div>
+      <div class="ritual-card fade-up" style="transition-delay:.16s"><span class="r-num">03</span><div class="r-icon">🌿</div><div class="r-time">Phút 7–10</div><h3 class="r-title">Aroma & Vibe</h3><p class="r-desc">Xịt Aroma Spray, bật playlist. Kết hợp khứu giác và thính giác để tạo không gian thư giãn toàn diện, ngắt hẳn khỏi dòng thông tin.</p></div>
+      <div class="ritual-card fade-up" style="transition-delay:.08s"><span class="r-num">04</span><div class="r-icon">✍️</div><div class="r-time">Phút 10–14</div><h3 class="r-title">Journal</h3><p class="r-desc">Mở Emotional Journal, viết theo prompts theo Hành của ngày. Không cần văn hay — chỉ cần thành thật với chính mình vài dòng thôi.</p></div>
+      <div class="ritual-card fade-up" style="transition-delay:.16s"><span class="r-num">05</span><div class="r-icon">🔮</div><div class="r-time">Phút 14–15</div><h3 class="r-title">Reflect</h3><p class="r-desc">Đọc lại những gì vừa viết. Nhận ra điều bạn đang thực sự cảm thấy. Một câu hỏi nhỏ kết thúc nghi thức: "Mình cần gì nhất lúc này?"</p></div>
+      <div class="ritual-card fade-up" style="transition-delay:.24s"><span class="r-num">06</span><div class="r-icon">🌱</div><div class="r-time">Mỗi ngày</div><h3 class="r-title">Duy trì</h3><p class="r-desc">21 ngày để hình thành thói quen. Mỗi ngày một Hành khác nhau — tùy cảm xúc. Không cứng nhắc, không áp lực, không "phải làm".</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRONG HỘP — INTERACTIVE -->
+<section id="tronghop">
+  <div class="container">
+    <div class="inbox-hdr fade-up">
+      <div class="section-tag" style="justify-content:center">Trong hộp</div>
+      <h2>Mọi thứ bạn cần<br>cho một <em>nghi thức trọn vẹn.</em></h2>
+      <p>Không phải những sản phẩm rời rạc. Mỗi thành phần được thiết kế để bổ trợ cho nhau trong cùng một quy trình 15 phút.</p>
+    </div>
+    <div class="inbox-layout">
+      <!-- LEFT: image viewer -->
+      <div class="inbox-viewer fade-up">
+        <img src="photos/logo.jpg" alt="" class="inbox-viewer-img" id="inboxViewerImg">
+        <div class="inbox-viewer-caption">
+          <h4 id="inboxViewerTitle">Ngũ Hành Full Box</h4>
+          <p id="inboxViewerSub">Chọn một sản phẩm bên cạnh để xem chi tiết</p>
+        </div>
+      </div>
+      <!-- RIGHT: product list -->
+      <div class="inbox-items fade-up" style="transition-delay:.12s">
+
+        <!-- Item 1 -->
+        <div class="inbox-item active" data-img="photos/logo.jpg" data-title="5 Dòng Trà Ngũ Hành" data-sub="Công thức thảo mộc theo từng trạng thái cảm xúc" onclick="selectInboxItem(this)">
+          <div class="inbox-item-header">
+            <div class="inbox-item-icon">🍃</div>
+            <div class="inbox-item-header-text">
+              <h4>5 Dòng Trà Ngũ Hành</h4>
+              <p>Mộc · Hỏa · Thổ · Kim · Thủy</p>
+            </div>
+            <div class="inbox-item-arrow"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12M6 12h12"/></svg></div>
+          </div>
+          <div class="inbox-detail"><div class="inbox-detail-inner"><div class="inbox-detail-body">
+            <p class="inbox-detail-desc">Mỗi dòng là một công thức thảo mộc riêng biệt, gắn với một trạng thái cảm xúc cụ thể theo triết lý Ngũ Hành. 100% dược liệu thiên nhiên từ các vườn hữu cơ Lâm Đồng, Mộc Châu và Đắk Lắk — không hương liệu, không chất bảo quản.</p>
+            <div class="inbox-detail-tags">
+              <span class="inbox-tag">🌿 CALM (Mộc)</span>
+              <span class="inbox-tag">🔥 RELEASE (Hỏa)</span>
+              <span class="inbox-tag">⚖️ BALANCE (Thổ)</span>
+              <span class="inbox-tag">🤍 COMFORT (Kim)</span>
+              <span class="inbox-tag">💧 RESTORE (Thủy)</span>
+              <span class="inbox-tag">100% Organic</span>
+            </div>
+            <div class="inbox-detail-cta">
+              <span class="inbox-detail-price">Có trong Full Box</span>
+              <button class="btn-add-cart" onclick="event.stopPropagation();addToCart({id:'box',name:'Ngũ Hành Full Box',price:1290000,emoji:'🌿'})"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>Thêm Full Box vào giỏ</button>
+            </div>
+          </div></div></div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="inbox-item" data-img="photos/aroma.jpg" data-title="Aroma Spray 50ml" data-sub="Hương thảo mộc kích hoạt thư giãn qua khứu giác" onclick="selectInboxItem(this)">
+          <div class="inbox-item-header">
+            <div class="inbox-item-icon">🌸</div>
+            <div class="inbox-item-header-text">
+              <h4>Aroma Spray 50ml</h4>
+              <p>Hương thảo mộc · 5 mùi hương</p>
+            </div>
+            <div class="inbox-item-arrow"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12M6 12h12"/></svg></div>
+          </div>
+          <div class="inbox-detail"><div class="inbox-detail-inner"><div class="inbox-detail-body">
+            <p class="inbox-detail-desc">Hương thảo mộc được pha trộn kỳ công — mỗi mùi tương ứng với một Hành. Chiết xuất từ tinh dầu thiên nhiên nhập từ nhà máy chưng cất tại Provence (Pháp) và vùng dược liệu Việt Nam. Xịt lên gối, vào không gian, hoặc cổ tay để kích hoạt thư giãn tức thì.</p>
+            <div class="inbox-detail-tags">
+              <span class="inbox-tag">Vegan</span>
+              <span class="inbox-tag">Alcohol-free</span>
+              <span class="inbox-tag">Hypoallergenic</span>
+              <span class="inbox-tag">50ml</span>
+            </div>
+            <div class="inbox-detail-cta">
+              <span class="inbox-detail-price">Có trong Full Box</span>
+              <button class="btn-add-cart" onclick="event.stopPropagation();addToCart({id:'box',name:'Ngũ Hành Full Box',price:1290000,emoji:'🌿'})"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>Thêm Full Box vào giỏ</button>
+            </div>
+          </div></div></div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="inbox-item" data-img="photos/journal.jpg" data-title="Emotional Journal" data-sub="64 trang prompts thiết kế theo từng Hành" onclick="selectInboxItem(this)">
+          <div class="inbox-item-header">
+            <div class="inbox-item-icon">📓</div>
+            <div class="inbox-item-header-text">
+              <h4>Emotional Journal · 64 trang</h4>
+              <p>Prompts theo Hành · Bìa linen</p>
+            </div>
+            <div class="inbox-item-arrow"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12M6 12h12"/></svg></div>
+          </div>
+          <div class="inbox-detail"><div class="inbox-detail-inner"><div class="inbox-detail-body">
+            <p class="inbox-detail-desc">Cuốn journal 64 trang với bìa linen mềm mại, in offset lụa. Mỗi trang là một prompt được viết riêng cho từng Hành — nhẹ nhàng, không phán xét, chỉ đủ để bạn bắt đầu. Kèm hướng dẫn nghi thức 15 phút và bản đồ cảm xúc theo tuần.</p>
+            <div class="inbox-detail-tags">
+              <span class="inbox-tag">64 trang prompts</span>
+              <span class="inbox-tag">Bìa linen</span>
+              <span class="inbox-tag">Giấy 100gsm</span>
+              <span class="inbox-tag">Emotion tracking</span>
+            </div>
+            <div class="inbox-detail-cta">
+              <span class="inbox-detail-price">Có trong Full Box</span>
+              <button class="btn-add-cart" onclick="event.stopPropagation();addToCart({id:'box',name:'Ngũ Hành Full Box',price:1290000,emoji:'🌿'})"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>Thêm Full Box vào giỏ</button>
+            </div>
+          </div></div></div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="inbox-item" data-img="photos/qr.jpg" data-title="QR Ritual Card & Web Check-in" data-sub="Cổng vào nghi thức kỹ thuật số" onclick="selectInboxItem(this)">
+          <div class="inbox-item-header">
+            <div class="inbox-item-icon">📱</div>
+            <div class="inbox-item-header-text">
+              <h4>QR Ritual Card & Web Check-in</h4>
+              <p>Check-in cảm xúc · Playlist cá nhân hóa</p>
+            </div>
+            <div class="inbox-item-arrow"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12M6 12h12"/></svg></div>
+          </div>
+          <div class="inbox-detail"><div class="inbox-detail-inner"><div class="inbox-detail-body">
+            <p class="inbox-detail-desc">Thẻ thiết kế mặt đôi kèm QR code. Quét QR để vào trang Web Check-in: trả lời 3 câu hỏi cảm xúc, nhận gợi ý Hành, playlist tùy chỉnh và hướng dẫn ritual theo ngày. Tích hợp mood tracker để theo dõi hành trình cảm xúc theo tuần.</p>
+            <div class="inbox-detail-tags">
+              <span class="inbox-tag">Web check-in</span>
+              <span class="inbox-tag">Mood tracker</span>
+              <span class="inbox-tag">Playlist cá nhân hóa</span>
+              <span class="inbox-tag">Không cần app</span>
+            </div>
+            <div class="inbox-detail-cta">
+              <span class="inbox-detail-price">Có trong tất cả gói</span>
+              <a href="#checkin" class="btn-add-cart"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>Thử Check-in ngay</a>
+            </div>
+          </div></div></div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="inbox-item" data-img="photos/playlist.jpg" data-title="Playlist Độc Quyền Ngũ Hành" data-sub="5 playlist tuyển chọn theo 5 trạng thái cảm xúc" onclick="selectInboxItem(this)">
+          <div class="inbox-item-header">
+            <div class="inbox-item-icon">🎵</div>
+            <div class="inbox-item-header-text">
+              <h4>Playlist Độc Quyền</h4>
+              <p>5 playlist · Âm nhạc không lời</p>
+            </div>
+            <div class="inbox-item-arrow"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12M6 12h12"/></svg></div>
+          </div>
+          <div class="inbox-detail"><div class="inbox-detail-inner"><div class="inbox-detail-body">
+            <p class="inbox-detail-desc">5 playlist được curator tuyển chọn thủ công, mỗi playlist tương ứng với một Hành và một trạng thái cảm xúc. Nhạc không lời, âm thanh thiên nhiên và binaural beats — cùng với Aroma Spray, tạo nên môi trường thư giãn đa giác quan hoàn chỉnh.</p>
+            <div class="inbox-detail-tags">
+              <span class="inbox-tag">🌿 Forest Breath (Mộc)</span>
+              <span class="inbox-tag">🔥 Fire & Flow (Hỏa)</span>
+              <span class="inbox-tag">🌾 Earth & Roots (Thổ)</span>
+              <span class="inbox-tag">✨ Silver Lining (Kim)</span>
+              <span class="inbox-tag">🌊 Deep Waters (Thủy)</span>
+            </div>
+            <div class="inbox-detail-cta">
+              <span class="inbox-detail-price">Miễn phí khi mua hộp</span>
+              <button class="btn-add-cart" onclick="event.stopPropagation();addToCart({id:'starter',name:'Starter Kit',price:690000,emoji:'✨'})"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>Bắt đầu từ Starter Kit</button>
+            </div>
+          </div></div></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NGŨ HÀNH TABS -->
+<section id="nguhanh">
+  <div class="container">
+    <div class="nh-hdr fade-up">
+      <div class="section-tag" style="justify-content:center">Ngũ Hành cảm xúc</div>
+      <h2>5 trạng thái. 5 dòng trà.<br><em>1 hành trình trở về.</em></h2>
+      <p>Mỗi Hành là một trạng thái cảm xúc — và một cách chăm sóc bản thân khác nhau. Chọn Hành của ngày hôm nay.</p>
+    </div>
+    <div class="hanh-tabs fade-up" style="transition-delay:.1s">
+      <button class="hanh-tab active" data-h="moc" onclick="switchHanh('moc')"><span class="hanh-dot" data-h="moc"></span>木 Mộc · CALM</button>
+      <button class="hanh-tab" data-h="hoa" onclick="switchHanh('hoa')"><span class="hanh-dot" data-h="hoa"></span>火 Hỏa · RELEASE</button>
+      <button class="hanh-tab" data-h="tho" onclick="switchHanh('tho')"><span class="hanh-dot" data-h="tho"></span>土 Thổ · BALANCE</button>
+      <button class="hanh-tab" data-h="kim" onclick="switchHanh('kim')"><span class="hanh-dot" data-h="kim"></span>金 Kim · COMFORT</button>
+      <button class="hanh-tab" data-h="thuy" onclick="switchHanh('thuy')"><span class="hanh-dot" data-h="thuy"></span>水 Thủy · RESTORE</button>
+    </div>
+
+    <div class="hanh-panel active" id="hp-moc">
+      <div class="hp-img-wrap"><img src="photos/moc.jpg" alt="Mộc CALM"><div class="hp-img-badge">🌿 Mộc · CALM · 木</div></div>
+      <div>
+        <div class="hp-chinese">木</div>
+        <div class="hp-label" style="color:var(--moc)">Mộc · Wood</div>
+        <div class="hp-name">CALM</div>
+        <div class="hp-sub">Thư giãn · Thanh lọc · Buông bỏ</div>
+        <div class="hp-emotion" style="background:var(--moc-bg);color:var(--moc)">🌿 Lo âu · Overthinking · Bực bội · Cáu gắt</div>
+        <p class="hp-desc">Dành cho những ngày bạn cảm thấy lo âu, overthinking, hay bực bội và dồn nén. Mộc gắn với sự phát triển, sức sống và linh hoạt — giúp bạn "buông" những dòng suy nghĩ đang chạy mãi không ngừng, để hơi thở được trở về nhịp bình thường.</p>
+        <div class="hp-formula" style="background:var(--moc-bg);color:var(--moc)">✦ Trà xanh Tân Cương, Hoa cúc La Mã, Bạc hà Hà Lan, Cam thảo — Thanh gan, giáng hỏa, an thần nhẹ</div>
+        <div class="hp-chips">
+          <span class="hp-chip" style="background:var(--moc-bg);color:var(--moc);border-color:var(--moc-bg)">Trà xanh</span>
+          <span class="hp-chip" style="background:var(--moc-bg);color:var(--moc);border-color:var(--moc-bg)">Hoa cúc</span>
+          <span class="hp-chip" style="background:var(--moc-bg);color:var(--moc);border-color:var(--moc-bg)">Bạc hà</span>
+          <span class="hp-chip" style="background:var(--moc-bg);color:var(--moc);border-color:var(--moc-bg)">Cam thảo</span>
+        </div>
+        <div class="hp-journal-box" style="background:var(--moc-bg)">
+          <div class="hp-journal-label" style="color:var(--moc)">Journal prompt hôm nay</div>
+          <div class="hp-journal-prompt" style="color:var(--green-dark)">"Điều gì đang chiếm nhiều không gian nhất trong đầu mình lúc này? Nếu buông nó xuống được 15 phút, mình muốn dùng 15 phút đó để làm gì?"</div>
+        </div>
+        <div class="hp-price-row">
+          <div class="hp-price">Từ 690.000đ</div>
+          <button class="btn-add-hanh" style="background:var(--moc)" onclick="addToCart({id:'starter',name:'Starter Kit (Mộc CALM)',price:690000,emoji:'🌿'})">+ Thêm vào giỏ</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="hanh-panel" id="hp-hoa">
+      <div class="hp-img-wrap"><img src="photos/hoa.jpg" alt="Hỏa RELEASE"><div class="hp-img-badge">🔥 Hỏa · RELEASE · 火</div></div>
+      <div>
+        <div class="hp-chinese">火</div>
+        <div class="hp-label" style="color:var(--hoa)">Hỏa · Fire</div>
+        <div class="hp-name">RELEASE</div>
+        <div class="hp-sub">Giải tỏa · Hoạt huyết · Sống động</div>
+        <div class="hp-emotion" style="background:var(--hoa-bg);color:var(--hoa)">🔥 Căng thẳng · Dồn nén · Bế tắc · Tim đập nhanh</div>
+        <p class="hp-desc">Dành cho những ngày bạn cảm thấy căng thẳng tột độ, áp lực công việc, hay bế tắc không thoát ra được. Hỏa tạo không gian để thả lỏng và giải tỏa — như ngọn lửa cháy rồi tắt, để lại khoảng trống bình yên phía sau.</p>
+        <div class="hp-formula" style="background:var(--hoa-bg);color:var(--hoa)">✦ Trà nụ hồng Đà Lạt, Quế Sri Lanka, Hồng hoa, Táo đỏ Tân Cương — Hoạt huyết, giải uất, ôn dương</div>
+        <div class="hp-chips">
+          <span class="hp-chip" style="background:var(--hoa-bg);color:var(--hoa);border-color:var(--hoa-bg)">Trà nụ hồng</span>
+          <span class="hp-chip" style="background:var(--hoa-bg);color:var(--hoa);border-color:var(--hoa-bg)">Quế</span>
+          <span class="hp-chip" style="background:var(--hoa-bg);color:var(--hoa);border-color:var(--hoa-bg)">Hồng hoa</span>
+          <span class="hp-chip" style="background:var(--hoa-bg);color:var(--hoa);border-color:var(--hoa-bg)">Táo đỏ</span>
+        </div>
+        <div class="hp-journal-box" style="background:var(--hoa-bg)">
+          <div class="hp-journal-label" style="color:var(--hoa)">Journal prompt hôm nay</div>
+          <div class="hp-journal-prompt" style="color:#3a2018">"Điều gì đang tạo ra nhiều áp lực nhất cho mình? Nếu mình không cần phải giải quyết nó ngay hôm nay, mình cảm thấy thế nào?"</div>
+        </div>
+        <div class="hp-price-row">
+          <div class="hp-price">Từ 690.000đ</div>
+          <button class="btn-add-hanh" style="background:var(--hoa)" onclick="addToCart({id:'starter',name:'Starter Kit (Hỏa RELEASE)',price:690000,emoji:'🔥'})">+ Thêm vào giỏ</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="hanh-panel" id="hp-tho">
+      <div class="hp-img-wrap"><img src="photos/tho.jpg" alt="Thổ BALANCE"><div class="hp-img-badge">⚖️ Thổ · BALANCE · 土</div></div>
+      <div>
+        <div class="hp-chinese">土</div>
+        <div class="hp-label" style="color:var(--tho)">Thổ · Earth</div>
+        <div class="hp-name">BALANCE</div>
+        <div class="hp-sub">Cân bằng · Ổn định · Nuôi dưỡng</div>
+        <div class="hp-emotion" style="background:var(--tho-bg);color:var(--tho)">⚖️ Mất phương hướng · Chao đảo · Chán nản · Không tập trung</div>
+        <p class="hp-desc">Dành cho những ngày bạn cảm thấy mất phương hướng, chao đảo cảm xúc, hay suy nghĩ quá nhiều mà không đến đâu. Thổ gắn với sự ổn định, trung tâm và nuôi dưỡng — giúp bạn tìm lại điểm tựa bên trong khi mọi thứ bên ngoài đang lung lay.</p>
+        <div class="hp-formula" style="background:var(--tho-bg);color:var(--tho)">✦ Đảng sâm Bắc Quản, Ý dĩ Đắk Lắk, Cam thảo, Trần bì — Bổ tỳ, kiện vị, định tâm, hóa đàm</div>
+        <div class="hp-chips">
+          <span class="hp-chip" style="background:var(--tho-bg);color:var(--tho);border-color:var(--tho-bg)">Đảng sâm</span>
+          <span class="hp-chip" style="background:var(--tho-bg);color:var(--tho);border-color:var(--tho-bg)">Ý dĩ</span>
+          <span class="hp-chip" style="background:var(--tho-bg);color:var(--tho);border-color:var(--tho-bg)">Cam thảo</span>
+          <span class="hp-chip" style="background:var(--tho-bg);color:var(--tho);border-color:var(--tho-bg)">Trần bì</span>
+        </div>
+        <div class="hp-journal-box" style="background:var(--tho-bg)">
+          <div class="hp-journal-label" style="color:var(--tho)">Journal prompt hôm nay</div>
+          <div class="hp-journal-prompt" style="color:#3a2a10">"Khi nào mình cảm thấy ổn định và vững vàng nhất? Có điều gì trong cuộc sống hiện tại đang là điểm tựa cho mình không?"</div>
+        </div>
+        <div class="hp-price-row">
+          <div class="hp-price">Từ 690.000đ</div>
+          <button class="btn-add-hanh" style="background:var(--tho)" onclick="addToCart({id:'starter',name:'Starter Kit (Thổ BALANCE)',price:690000,emoji:'⚖️'})">+ Thêm vào giỏ</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="hanh-panel" id="hp-kim">
+      <div class="hp-img-wrap"><img src="photos/kim.jpg" alt="Kim COMFORT"><div class="hp-img-badge">🤍 Kim · COMFORT · 金</div></div>
+      <div>
+        <div class="hp-chinese">金</div>
+        <div class="hp-label" style="color:var(--kim)">Kim · Metal</div>
+        <div class="hp-name">COMFORT</div>
+        <div class="hp-sub">Xoa dịu · Thanh lọc · Bao bọc</div>
+        <div class="hp-emotion" style="background:var(--kim-bg);color:var(--kim)">🤍 Buồn bã · Cô đơn · Trống rỗng · Tủi thân</div>
+        <p class="hp-desc">Dành cho những ngày bạn cảm thấy buồn bã, cô đơn hay trống rỗng bên trong. Kim tập trung vào sự thanh lọc và nhẹ nhàng — một tách trà đủ ấm để bạn cảm thấy được bao bọc trong những khoảnh khắc khó khăn nhất.</p>
+        <div class="hp-formula" style="background:var(--kim-bg);color:var(--kim)">✦ Hoa nhài Huế, Bạch cúc Đà Lạt, Kỳ tử trắng, Bách hợp — Dưỡng phế, nhuận tràng, an thần, trừ phiền</div>
+        <div class="hp-chips">
+          <span class="hp-chip" style="background:var(--kim-bg);color:var(--kim);border-color:var(--kim-bg)">Hoa nhài</span>
+          <span class="hp-chip" style="background:var(--kim-bg);color:var(--kim);border-color:var(--kim-bg)">Bạch cúc</span>
+          <span class="hp-chip" style="background:var(--kim-bg);color:var(--kim);border-color:var(--kim-bg)">Kỳ tử trắng</span>
+          <span class="hp-chip" style="background:var(--kim-bg);color:var(--kim);border-color:var(--kim-bg)">Bách hợp</span>
+        </div>
+        <div class="hp-journal-box" style="background:var(--kim-bg)">
+          <div class="hp-journal-label" style="color:var(--kim)">Journal prompt hôm nay</div>
+          <div class="hp-journal-prompt" style="color:#3a3028">"Mình đang cần điều gì nhất lúc này — được lắng nghe, được ôm, hay được yên tĩnh? Mình có thể cho bản thân mình điều đó không?"</div>
+        </div>
+        <div class="hp-price-row">
+          <div class="hp-price">Từ 690.000đ</div>
+          <button class="btn-add-hanh" style="background:var(--kim)" onclick="addToCart({id:'starter',name:'Starter Kit (Kim COMFORT)',price:690000,emoji:'🤍'})">+ Thêm vào giỏ</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="hanh-panel" id="hp-thuy">
+      <div class="hp-img-wrap"><img src="photos/thuy.jpg" alt="Thủy RESTORE"><div class="hp-img-badge">💧 Thủy · RESTORE · 水</div></div>
+      <div>
+        <div class="hp-chinese">水</div>
+        <div class="hp-label" style="color:var(--thuy)">Thủy · Water</div>
+        <div class="hp-name">RESTORE</div>
+        <div class="hp-sub">Phục hồi · Tích lũy · Tái sinh</div>
+        <div class="hp-emotion" style="background:var(--thuy-bg);color:var(--thuy)">💧 Kiệt sức · Burnout · Uể oải · Cạn năng lượng</div>
+        <p class="hp-desc">Dành cho những ngày bạn cảm thấy mệt mỏi, kiệt sức, burn-out hay cạn kiệt năng lượng. Thủy gắn với sự chảy trôi, tích lũy và phục hồi — giúp bạn nạp lại từ bên trong, như mặt nước tĩnh lặng bổ sung sức lực cho đất.</p>
+        <div class="hp-formula" style="background:var(--thuy-bg);color:var(--thuy)">✦ Đậu đen xanh lòng Lạng Sơn, Hoài sơn, Kỳ tử đỏ Ningxia, Linh chi Đà Lạt — Bổ thận, dưỡng âm, ích tinh, an thần</div>
+        <div class="hp-chips">
+          <span class="hp-chip" style="background:var(--thuy-bg);color:var(--thuy);border-color:var(--thuy-bg)">Đậu đen xanh lòng</span>
+          <span class="hp-chip" style="background:var(--thuy-bg);color:var(--thuy);border-color:var(--thuy-bg)">Hoài sơn</span>
+          <span class="hp-chip" style="background:var(--thuy-bg);color:var(--thuy);border-color:var(--thuy-bg)">Kỳ tử đỏ</span>
+          <span class="hp-chip" style="background:var(--thuy-bg);color:var(--thuy);border-color:var(--thuy-bg)">Linh chi</span>
+        </div>
+        <div class="hp-journal-box" style="background:var(--thuy-bg)">
+          <div class="hp-journal-label" style="color:var(--thuy)">Journal prompt hôm nay</div>
+          <div class="hp-journal-prompt" style="color:#2a3040">"Mình đã cho đi điều gì nhiều nhất gần đây? Điều gì có thể giúp mình nạp lại năng lượng — không phải làm việc hiệu quả hơn, mà là thực sự nghỉ ngơi?"</div>
+        </div>
+        <div class="hp-price-row">
+          <div class="hp-price">Từ 690.000đ</div>
+          <button class="btn-add-hanh" style="background:var(--thuy)" onclick="addToCart({id:'starter',name:'Starter Kit (Thủy RESTORE)',price:690000,emoji:'💧'})">+ Thêm vào giỏ</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHECK-IN -->
+<section id="checkin">
+  <div class="ci-bg"></div>
+  <div class="container">
+    <div class="ci-hdr fade-up">
+      <div class="section-tag">Web Check-in</div>
+      <h2>Hôm nay bạn<br><em>đang cảm thấy thế nào?</em></h2>
+      <p>Trả lời một câu hỏi ngắn để nhận gợi ý Hành và nghi thức phù hợp nhất cho bạn ngay lúc này.</p>
+    </div>
+    <div class="ci-card fade-up" style="transition-delay:.1s">
+      <div id="ciForm">
+        <div class="ci-step-label">Chọn trạng thái gần nhất với bạn lúc này</div>
+        <div class="ci-question">Nếu cảm xúc của bạn lúc này là một từ, đó sẽ là...?</div>
+        <div class="emotion-grid">
+          <button class="emotion-btn" data-h="moc" onclick="selectEmotion(this)"><span class="e-emoji">😰</span><span class="e-label">Lo âu<br>Overthinking</span></button>
+          <button class="emotion-btn" data-h="hoa" onclick="selectEmotion(this)"><span class="e-emoji">😤</span><span class="e-label">Căng thẳng<br>Dồn nén</span></button>
+          <button class="emotion-btn" data-h="tho" onclick="selectEmotion(this)"><span class="e-emoji">😶</span><span class="e-label">Mất phương<br>hướng</span></button>
+          <button class="emotion-btn" data-h="kim" onclick="selectEmotion(this)"><span class="e-emoji">😔</span><span class="e-label">Buồn bã<br>Cô đơn</span></button>
+          <button class="emotion-btn" data-h="thuy" onclick="selectEmotion(this)"><span class="e-emoji">😮‍💨</span><span class="e-label">Kiệt sức<br>Burnout</span></button>
+        </div>
+      </div>
+      <div class="ci-result" id="ciResult">
+        <div class="result-badge" id="rBadge"></div>
+        <div class="result-title" id="rTitle"></div>
+        <div class="result-sub" id="rSub"></div>
+        <div class="result-steps">
+          <div class="result-step">🪷 Check-in xong!</div>
+          <div class="result-step" id="rTea">🍵 Pha trà</div>
+          <div class="result-step">🌿 Xịt Aroma Spray</div>
+          <div class="result-step" id="rMusic">🎵 Bật playlist</div>
+          <div class="result-step">✍️ Mở Journal</div>
+          <div class="result-step">🔮 Reflect</div>
+        </div>
+        <div class="result-actions">
+          <a href="#banggia" class="btn-primary">Đặt hộp ngay</a>
+          <button class="btn-reset" onclick="resetCI()">Thử lại ↺</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="container">
+    <div class="test-hdr fade-up">
+      <div class="section-tag" style="justify-content:center">Cộng đồng chậm lại</div>
+      <h2>Hơn 2.400 người đã bắt đầu<br><em>một buổi tối dịu dàng hơn.</em></h2>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card fade-up">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Mình mua thử vì cái QR check-in nghe khá hay ho. Không ngờ ngày nào cũng phải mở ra, giống một cái nghi thức tối thay cho việc lướt điện thoại. Nhẹ đầu thấy rõ."</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background:var(--moc);color:#fff">M</div>
+          <div class="review-info"><div class="review-name">Minh Anh, 27</div><div class="review-role">Product Designer · Sài Gòn</div></div>
+          <span class="review-verified">Verified</span>
+        </div>
+      </div>
+      <div class="review-card fade-up" style="transition-delay:.1s">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Là một người bị burnout kinh niên, mình đánh giá cao cách gói ghém: không lên gân, không đao to búa lớn, chỉ trà, hương và một cuốn sổ. Vậy mà đủ."</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background:var(--hoa);color:#fff">T</div>
+          <div class="review-info"><div class="review-name">Trung Kiên, 31</div><div class="review-role">Founder · Hà Nội</div></div>
+          <span class="review-verified">Verified</span>
+        </div>
+      </div>
+      <div class="review-card fade-up" style="transition-delay:.2s">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Ban đầu định mua tặng chị mình mà xong xài luôn hihi. Aroma Spray thơm siêu dịu, journal prompts thì đúng chạm — có hôm ngồi khóc rồi cười một mình luôn."</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background:var(--kim);color:#fff">D</div>
+          <div class="review-info"><div class="review-name">Diệp Linh, 24</div><div class="review-role">Copywriter · Đà Nẵng</div></div>
+          <span class="review-verified">Verified</span>
+        </div>
+      </div>
+    </div>
+    <div class="trust-row fade-up">
+      <div class="trust-item"><svg width="14" height="14" fill="none" stroke="var(--green-dark)" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>Wellness Brand of the Year · Vietcetera 2025</div>
+      <div class="trust-item"><svg width="14" height="14" fill="none" stroke="var(--green-dark)" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>100% Vietnamese Herbs · Cruelty-Free · Vegan</div>
+      <div class="trust-item"><svg width="14" height="14" fill="none" stroke="var(--green-dark)" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>Bao bì tái chế 100%</div>
+    </div>
+  </div>
+</section>
+
+<!-- BẢNG GIÁ -->
+<section id="banggia">
+  <div class="container">
+    <div class="price-hdr fade-up">
+      <div class="section-tag" style="justify-content:center">Bảng giá</div>
+      <h2>Ba cách để bắt đầu<br><em>chăm sóc chính mình.</em></h2>
+      <p>Tất cả gói đều kèm QR Ritual Card, hướng dẫn 15 phút và playlist độc quyền.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card fade-up">
+        <div class="price-icon">✨</div>
+        <div class="price-name">Starter Kit</div>
+        <div class="price-sub-tag">Thử nghi thức · 7 ngày</div>
+        <p class="price-desc">Đủ để bạn nếm thử trọn vẹn nghi thức trong tuần đầu tiên. Gói trà mix, journal mini và Aroma Spray.</p>
+        <div class="price-amt">690.000<span style="font-size:16px">đ</span></div>
+        <ul class="price-features">
+          <li><svg class="pf-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>7 gói trà mix (5 Hành)</li>
+          <li><svg class="pf-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Aroma Spray 20ml</li>
+          <li><svg class="pf-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Reflect Journal 32 trang</li>
+          <li><svg class="pf-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>QR Ritual Card (7 ngày)</li>
+        </ul>
+        <button class="price-btn pbtn-dark" onclick="addToCartAndOpen({id:'starter',name:'Starter Kit',price:690000,emoji:'✨'})">
+          <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+          Thêm vào giỏ
+        </button>
+      </div>
+      <div class="price-card featured fade-up" style="transition-delay:.1s">
+        <div class="price-top-badge">Bán chạy nhất</div>
+        <div class="price-icon">🌿</div>
+        <div class="price-name">Ngũ Hành Full Box</div>
+        <div class="price-sub-tag">Trọn bộ 5 Hành · 21 ngày</div>
+        <p class="price-desc">Trải nghiệm đủ 5 Hành, dùng trong 3-4 tuần. Gift-ready, kèm thiệp handwritten theo yêu cầu.</p>
+        <div class="price-amt">1.290.000<span style="font-size:16px">đ</span></div>
+        <div class="price-old">Giá gốc: 1.590.000đ · Tiết kiệm 300K</div>
+        <ul class="price-features">
+          <li><svg class="pf-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Đủ 5 túi trà Ngũ Hành</li>
+          <li><svg class="pf-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Aroma Spray 50ml</li>
+          <li><svg class="pf-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Reflect Journal linen 64 trang</li>
+          <li><svg class="pf-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>QR Ritual Card (30 ngày)</li>
+          <li><svg class="pf-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Freeship toàn quốc</li>
+          <li><svg class="pf-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Thiệp handwritten miễn phí</li>
+        </ul>
+        <button class="price-btn pbtn-white" onclick="addToCartAndOpen({id:'box',name:'Ngũ Hành Full Box',price:1290000,emoji:'🌿'})">
+          <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+          Thêm vào giỏ
+        </button>
+      </div>
+      <div class="price-card fade-up" style="transition-delay:.2s">
+        <div class="price-icon">🔄</div>
+        <div class="price-name">Ritual Subscription</div>
+        <div class="price-sub-tag">Đăng ký hàng tháng</div>
+        <p class="price-desc">Mỗi tháng một hộp tinh gọn, playlist mới, prompts mới. Hủy bất kỳ lúc nào, không hỏi lý do.</p>
+        <div class="price-amt">890.000<span style="font-size:16px">đ</span><span class="price-unit">/tháng</span></div>
+        <ul class="price-features">
+          <li><svg class="pf-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>3 túi trà theo mùa (thay đổi)</li>
+          <li><svg class="pf-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Aroma Spray Refill 30ml</li>
+          <li><svg class="pf-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Journal mini 20 trang</li>
+          <li><svg class="pf-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Playlist độc quyền mỗi tháng</li>
+          <li><svg class="pf-check" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Hủy bất kỳ lúc nào</li>
+        </ul>
+        <button class="price-btn pbtn-dark" onclick="addToCartAndOpen({id:'sub',name:'Ritual Subscription (tháng đầu)',price:890000,emoji:'🔄'})">
+          <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+          Đăng ký ngay
+        </button>
+      </div>
+    </div>
+    <div class="pricing-note fade-up"><svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Đổi trả 14 ngày · Freeship đơn từ 890K · Thanh toán khi nhận hàng (COD)</div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container-sm">
+    <div class="faq-hdr fade-up">
+      <div class="section-tag" style="justify-content:center">FAQ</div>
+      <h2>Những câu hỏi thường gặp</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item fade-up" onclick="toggleFaq(this)"><div class="faq-q"><h4>Ngũ Hành Self-Care Box có phải là sản phẩm y tế hay trị liệu tâm lý không?</h4><div class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6v12M6 12h12"/></svg></div></div><div class="faq-wrap"><div class="faq-wrap-inner"><div class="faq-a">Không. Đây là bộ sản phẩm hỗ trợ self-care giúp bạn nhận diện và xoa dịu cảm xúc trong cuộc sống hàng ngày. Sản phẩm không thay thế cho tư vấn, chẩn đoán hay trị liệu tâm lý lâm sàng. Nếu bạn đang gặp vấn đề sức khỏe tinh thần nghiêm trọng, hãy liên hệ chuyên gia.</div></div></div></div>
+      <div class="faq-item fade-up" style="transition-delay:.05s" onclick="toggleFaq(this)"><div class="faq-q"><h4>Mình không hiểu gì về Ngũ Hành, dùng có được không?</h4><div class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6v12M6 12h12"/></svg></div></div><div class="faq-wrap"><div class="faq-wrap-inner"><div class="faq-a">Hoàn toàn được. Bạn không cần bất kỳ kiến thức nào. Ngũ Hành chỉ là câu chuyện thương hiệu — trải nghiệm thật sự là 4 bước rất trực quan: check-in cảm xúc, pha trà, nghe nhạc, viết journal. Chọn Hành nào cảm thấy phù hợp với mình hôm nay là đủ.</div></div></div></div>
+      <div class="faq-item fade-up" style="transition-delay:.1s" onclick="toggleFaq(this)"><div class="faq-q"><h4>Trà và tinh dầu có nguồn gốc từ đâu? Có an toàn không?</h4><div class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6v12M6 12h12"/></svg></div></div><div class="faq-wrap"><div class="faq-wrap-inner"><div class="faq-a">Trà thảo mộc từ các vườn hữu cơ tại Lâm Đồng, Mộc Châu, Đắk Lắk. Tinh dầu nhập từ nhà máy chưng cất Provence (Pháp) và vùng dược liệu Việt Nam. Tất cả đều có chứng nhận Vegan, Cruelty-free và được kiểm định độc lập. Không chứa chất bảo quản, không hương liệu tổng hợp.</div></div></div></div>
+      <div class="faq-item fade-up" style="transition-delay:.15s" onclick="toggleFaq(this)"><div class="faq-q"><h4>Thời gian giao hàng bao lâu? Có ship toàn quốc không?</h4><div class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6v12M6 12h12"/></svg></div></div><div class="faq-wrap"><div class="faq-wrap-inner"><div class="faq-a">Ship toàn quốc qua Giao Hàng Nhanh và J&T. Thời gian: Hà Nội & TP.HCM 1-2 ngày, các tỉnh thành khác 2-4 ngày. Đơn hàng trên 890K được miễn phí vận chuyển. Bạn có thể theo dõi đơn hàng qua email xác nhận.</div></div></div></div>
+      <div class="faq-item fade-up" style="transition-delay:.2s" onclick="toggleFaq(this)"><div class="faq-q"><h4>Đăng ký hàng tháng có thể hủy bất cứ lúc nào không?</h4><div class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6v12M6 12h12"/></svg></div></div><div class="faq-wrap"><div class="faq-wrap-inner"><div class="faq-a">Có. Bạn có thể tạm dừng hoặc hủy subscription bất cứ khi nào trong tài khoản, không cần lý do. Chúng mình luôn muốn bạn ở lại vì thật sự yêu thích, không phải vì lỡ mắc kẹt trong điều khoản.</div></div></div></div>
+      <div class="faq-item fade-up" style="transition-delay:.25s" onclick="toggleFaq(this)"><div class="faq-q"><h4>Mình có thể mua làm quà tặng không? Có thể kèm thiệp không?</h4><div class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6v12M6 12h12"/></svg></div></div><div class="faq-wrap"><div class="faq-wrap-inner"><div class="faq-a">Được nha. Ngũ Hành Full Box đi kèm thiệp handwritten miễn phí và hộp gift-ready. Bạn có thể để lại lời nhắn khi đặt hàng (mục Ghi chú) và chọn ngày giao mong muốn. Chúng mình sẽ viết thiệp và gói hàng cẩn thận như một món quà thật sự.</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section id="cta">
+  <div class="container">
+    <div class="cta-inner fade-up">
+      <div class="cta-body">
+        <div class="cta-pill">✦ Ưu đãi khai trương · Freeship đơn đầu</div>
+        <h2 class="cta-h2">Bắt đầu 15 phút đầu tiên<br><em>cho chính bạn, hôm nay.</em></h2>
+        <p class="cta-p">Miễn phí vận chuyển toàn quốc cho đơn đầu tiên. Đổi trả trong 14 ngày, không hỏi lý do.</p>
+        <div class="cta-actions">
+          <button class="cta-btn-white" onclick="addToCartAndOpen({id:'box',name:'Ngũ Hành Full Box',price:1290000,emoji:'🌿'})">Đặt hộp ngay <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg></button>
+          <a href="#checkin" class="btn-outline">Thử check-in cảm xúc</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="f-brand-name"><svg width="26" height="26" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18.5" stroke="currentColor" stroke-width="1.2" opacity=".4"/><circle cx="20" cy="8" r="2" fill="currentColor"/><path d="M20 10 Q28 20 20 30 Q12 20 20 10Z" stroke="currentColor" stroke-width="1" fill="currentColor" fill-opacity=".2"/><path d="M10 28 Q20 22 30 28" stroke="currentColor" stroke-width="1" fill="none" opacity=".35"/></svg>Ngũ Hành · Self-Care</div>
+        <p class="f-brand-desc">Chậm lại một chút. Một cuộc đời tốt đẹp không được xây bằng những buổi tối bồn chồn. Chúng mình gói ghém 15 phút mỗi ngày để bạn về được với chính mình.</p>
+        <div class="f-socials">
+          <a href="#" class="f-social-btn" aria-label="Instagram"><svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+          <a href="#" class="f-social-btn" aria-label="TikTok"><svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V9.07a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.5z"/></svg></a>
+          <a href="#" class="f-social-btn" aria-label="Facebook"><svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="f-col-title">Khám phá</h4>
+        <ul class="f-links">
+          <li><a href="#cauchuyen">Câu chuyện</a></li>
+          <li><a href="#nghithuc">Nghi thức 15 phút</a></li>
+          <li><a href="#tronghop">Trong hộp</a></li>
+          <li><a href="#nguhanh">Ngũ Hành cảm xúc</a></li>
+          <li><a href="#checkin">Check-in cảm xúc</a></li>
+          <li><a href="#banggia">Bảng giá</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="f-col-title">Hỗ trợ</h4>
+        <ul class="f-links">
+          <li><a href="#faq">Câu hỏi thường gặp</a></li>
+          <li><a href="#">Chính sách đổi trả</a></li>
+          <li><a href="#">Vận chuyển</a></li>
+          <li><a href="#">Hướng dẫn sử dụng</a></li>
+          <li><a href="#">Blog self-care</a></li>
+          <li><a href="#">Liên hệ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="f-col-title">Liên hệ</h4>
+        <div class="f-contact"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>144 Xuân Thủy, Cầu Giấy, Hà Nội</div>
+        <div class="f-contact"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>hi@nguhanh.care</div>
+        <div class="f-contact"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>0902 156 890</div>
+        <div class="f-contact"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>T2–T7 · 9:00 – 18:00</div>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <p>© 2026 Ngũ Hành Self-Care Box · Made with care in Vietnam 🌿</p>
+      <div class="f-bottom-links"><a href="#">Bảo mật</a><a href="#">Điều khoản</a><a href="#">Vận chuyển</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- CART DRAWER -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-hdr">
+    <div>
+      <div class="cart-hdr-title">Giỏ hàng</div>
+      <div class="cart-hdr-count" id="cartHdrCount">0 sản phẩm</div>
+    </div>
+    <button class="cart-close" onclick="closeCart()"><svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button>
+  </div>
+  <div class="cart-body" id="cartBody"></div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-subtotal">
+      <span class="cart-subtotal-label">Tạm tính</span>
+      <span class="cart-subtotal-val" id="cartSubtotal">0đ</span>
+    </div>
+    <div class="cart-ship-note">✓ Miễn phí vận chuyển cho đơn từ 890.000đ</div>
+    <button class="cart-checkout-btn" onclick="openCheckout()">Tiến hành thanh toán <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg></button>
+    <button class="cart-continue-btn" onclick="closeCart()">Tiếp tục mua sắm</button>
+  </div>
+</div>
+
+<!-- CHECKOUT MODAL -->
+<div class="checkout-overlay" id="checkoutOverlay">
+  <div class="checkout-modal" style="position:relative">
+    <button class="checkout-close" onclick="closeCheckout()"><svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button>
+    <div class="checkout-layout" id="checkoutLayout">
+      <!-- FORM SIDE -->
+      <div class="checkout-form-side">
+        <!-- Step indicator -->
+        <div class="checkout-step-indicator">
+          <div class="cs-step current" id="csi1">1</div>
+          <div class="cs-line"></div>
+          <div class="cs-label" style="font-size:10px;color:#9a8a7a;white-space:nowrap">Thông tin</div>
+          <div class="cs-line"></div>
+          <div class="cs-step" id="csi2">2</div>
+          <div class="cs-line"></div>
+          <div class="cs-label" style="font-size:10px;color:#9a8a7a;white-space:nowrap">Vận chuyển</div>
+          <div class="cs-line"></div>
+          <div class="cs-step" id="csi3">3</div>
+          <div class="cs-line"></div>
+          <div class="cs-label" style="font-size:10px;color:#9a8a7a;white-space:nowrap">Thanh toán</div>
+        </div>
+
+        <!-- Step 1: Contact info -->
+        <div class="checkout-step active" id="coStep1">
+          <div class="checkout-title">Thông tin người nhận</div>
+          <div class="checkout-subtitle">Điền thông tin để chúng mình giao hàng đến bạn nhé.</div>
+          <div class="form-section-title">👤 Người nhận</div>
+          <div class="form-row">
+            <div class="form-group"><label>Họ và tên *</label><input type="text" id="f-name" placeholder="Nguyễn Văn A"></div>
+            <div class="form-group"><label>Số điện thoại *</label><input type="tel" id="f-phone" placeholder="0901 234 567"></div>
+          </div>
+          <div class="form-row single">
+            <div class="form-group"><label>Email *</label><input type="email" id="f-email" placeholder="ten@email.com"></div>
+          </div>
+          <div class="form-section-title">📍 Địa chỉ giao hàng</div>
+          <div class="form-row">
+            <div class="form-group"><label>Tỉnh / Thành phố *</label>
+              <select id="f-province" onchange="updateDistrict()">
+                <option value="">-- Chọn Tỉnh/TP --</option>
+                <option>Hà Nội</option><option>TP. Hồ Chí Minh</option><option>Đà Nẵng</option><option>Hải Phòng</option><option>Cần Thơ</option><option>Huế</option><option>Nha Trang</option><option>Đà Lạt</option><option>Vũng Tàu</option><option>Tỉnh khác</option>
+              </select>
+            </div>
+            <div class="form-group"><label>Quận / Huyện *</label>
+              <select id="f-district">
+                <option value="">-- Chọn Quận/Huyện --</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Phường / Xã *</label><input type="text" id="f-ward" placeholder="Phường Xuân Thủy"></div>
+            <div class="form-group"><label>Số nhà, Đường *</label><input type="text" id="f-street" placeholder="144 Xuân Thủy, Cầu Giấy"></div>
+          </div>
+          <div class="form-row single">
+            <div class="form-group"><label>Ghi chú đơn hàng (thiệp, yêu cầu đặc biệt)</label><textarea id="f-note" placeholder="Ví dụ: Viết thiệp 'Chúc em tìm lại sự bình yên nhé 💚' — Giao trước 18h30 ngày 25/8"></textarea></div>
+          </div>
+          <div class="checkout-form-nav">
+            <button class="btn-back" onclick="closeCheckout()">✕ Đóng</button>
+            <button class="btn-next" onclick="goStep(2)">Tiếp theo <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg></button>
+          </div>
+        </div>
+
+        <!-- Step 2: Shipping -->
+        <div class="checkout-step" id="coStep2">
+          <div class="checkout-title">Phương thức vận chuyển</div>
+          <div class="checkout-subtitle">Chọn cách giao hàng phù hợp với bạn.</div>
+          <div class="payment-methods" style="margin-top:20px">
+            <label class="payment-method selected" id="ship-fast" onclick="selectShip(this)">
+              <input type="radio" name="shipping" value="fast" checked>
+              <span class="pm-icon">⚡</span>
+              <div class="pm-label"><strong>Giao hàng nhanh (1-2 ngày)</strong><span>35.000đ · Miễn phí cho đơn từ 890K</span></div>
+            </label>
+            <label class="payment-method" id="ship-eco" onclick="selectShip(this)">
+              <input type="radio" name="shipping" value="eco">
+              <span class="pm-icon">🚚</span>
+              <div class="pm-label"><strong>Giao hàng tiết kiệm (3-5 ngày)</strong><span>20.000đ · Miễn phí cho đơn từ 890K</span></div>
+            </label>
+          </div>
+          <div class="checkout-form-nav">
+            <button class="btn-back" onclick="goStep(1)">← Quay lại</button>
+            <button class="btn-next" onclick="goStep(3)">Tiếp theo <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg></button>
+          </div>
+        </div>
+
+        <!-- Step 3: Payment -->
+        <div class="checkout-step" id="coStep3">
+          <div class="checkout-title">Phương thức thanh toán</div>
+          <div class="checkout-subtitle">Chọn cách thanh toán phù hợp nhất với bạn.</div>
+          <div class="payment-methods" style="margin-top:20px">
+            <label class="payment-method selected" onclick="selectPayment(this,'cod')">
+              <input type="radio" name="payment" value="cod" checked>
+              <span class="pm-icon">💵</span>
+              <div class="pm-label"><strong>Thanh toán khi nhận hàng (COD)</strong><span>Kiểm tra hàng trước khi thanh toán</span></div>
+            </label>
+            <label class="payment-method" onclick="selectPayment(this,'bank')">
+              <input type="radio" name="payment" value="bank">
+              <span class="pm-icon">🏦</span>
+              <div class="pm-label"><strong>Chuyển khoản ngân hàng</strong><span>Vietcombank · MB Bank · Techcombank</span></div>
+            </label>
+            <div class="pm-transfer-box" id="bankTransferBox">
+              <p>Chuyển khoản đến tài khoản sau. Đơn hàng sẽ được xử lý sau khi xác nhận thanh toán.</p>
+              <p><strong>NH Vietcombank</strong> — 1234 5678 9012<br>Chủ TK: NGUYEN THI NGUYEN HANH<br>Nội dung: NH + [Số điện thoại]</p>
+              <div class="qr-placeholder">QR<br>Code</div>
+            </div>
+            <label class="payment-method" onclick="selectPayment(this,'momo')">
+              <input type="radio" name="payment" value="momo">
+              <span class="pm-icon">🩷</span>
+              <div class="pm-label"><strong>Ví MoMo</strong><span>Quét QR hoặc nhập SĐT: 0902 156 890</span></div>
+            </label>
+            <label class="payment-method" onclick="selectPayment(this,'zalo')">
+              <input type="radio" name="payment" value="zalo">
+              <span class="pm-icon">💙</span>
+              <div class="pm-label"><strong>ZaloPay</strong><span>Quét QR hoặc nhập SĐT: 0902 156 890</span></div>
+            </label>
+          </div>
+          <div style="background:var(--cream-card);border-radius:12px;padding:14px 16px;margin-bottom:20px;font-size:13px;color:#7a6a5a;display:flex;align-items:center;gap:8px">
+            <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            Thông tin của bạn được bảo mật hoàn toàn. Chúng mình không lưu thông tin thẻ.
+          </div>
+          <div class="checkout-form-nav">
+            <button class="btn-back" onclick="goStep(2)">← Quay lại</button>
+            <button class="btn-next" style="background:var(--hoa);flex:1;margin-left:12px;justify-content:center" onclick="submitOrder()">
+              <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Đặt hàng ngay
+            </button>
+          </div>
+        </div>
+
+      </div>
+      <!-- SUMMARY SIDE -->
+      <div class="checkout-summary-side">
+        <div class="co-summary-title">Đơn hàng của bạn</div>
+        <div class="co-items" id="coItems"></div>
+        <div class="co-divider"></div>
+        <div class="co-row"><span class="co-row-label">Tạm tính</span><span class="co-row-val" id="coSubtotal">0đ</span></div>
+        <div class="co-row"><span class="co-row-label">Phí vận chuyển</span><span class="co-row-val" id="coShip">Tính sau</span></div>
+        <div class="co-row"><span class="co-row-label">Giảm giá</span><span class="co-row-val" style="color:#90C8A0">–0đ</span></div>
+        <div class="co-total-row">
+          <span class="co-total-label">Tổng cộng</span>
+          <span class="co-total-val" id="coTotal">0đ</span>
+        </div>
+        <div style="margin-top:20px;display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(255,255,255,.45)">
+          <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>Đổi trả miễn phí trong 14 ngày
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- AUTH MODAL -->
+<div class="checkout-overlay" id="authOverlay" onclick="if(event.target===this)closeAuth()">
+  <div class="auth-modal fade-up visible">
+    <button class="checkout-close" onclick="closeAuth()"><svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button>
+    <div class="auth-hdr">
+      <div class="auth-tab active" id="tabLogin" onclick="switchAuthTab('login')">Đăng nhập</div>
+      <div class="auth-tab" id="tabRegister" onclick="switchAuthTab('register')">Đăng ký</div>
+    </div>
+    
+    <!-- Login Form -->
+    <form class="auth-form" id="authLogin" onsubmit="submitAuth(event, 'login')">
+      <div class="checkout-title" style="margin-bottom:20px">Chào mừng trở lại</div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" required placeholder="ten@email.com">
+      </div>
+      <div class="form-group">
+        <label>Mật khẩu</label>
+        <input type="password" required placeholder="••••••••">
+      </div>
+      <div style="text-align:right; margin-bottom: 24px;">
+        <a href="#" style="font-size: 13px; color: var(--green-dark);">Quên mật khẩu?</a>
+      </div>
+      <button type="submit" class="btn-primary" style="width:100%; justify-content:center; padding: 14px;">Đăng nhập</button>
+      <div class="auth-social">
+        <div class="auth-social-text"><span>hoặc đăng nhập bằng</span></div>
+        <div class="auth-social-btns">
+          <button type="button" class="btn-social">Google</button>
+          <button type="button" class="btn-social">Facebook</button>
+        </div>
+      </div>
+    </form>
+
+    <!-- Register Form -->
+    <form class="auth-form" id="authRegister" style="display:none" onsubmit="submitAuth(event, 'register')">
+      <div class="checkout-title" style="margin-bottom:20px">Tạo tài khoản mới</div>
+      <div class="form-group">
+        <label>Họ và tên</label>
+        <input type="text" required placeholder="Nguyễn Văn A">
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" required placeholder="ten@email.com">
+      </div>
+      <div class="form-group">
+        <label>Mật khẩu</label>
+        <input type="password" required placeholder="••••••••">
+      </div>
+      <button type="submit" class="btn-primary" style="width:100%; justify-content:center; padding: 14px; margin-top: 10px;">Đăng ký</button>
+    </form>
+  </div>
+</div>
+
+
+<script>
+// ─── SCROLL & NAVBAR ───
+window.addEventListener('scroll',()=>{
+  document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>55);
+  // parallax hero
+  const s=window.scrollY,bg=document.getElementById('heroBg');
+  if(bg&&s<window.innerHeight) bg.style.transform=`scale(1.06) translateY(${s*.22}px)`;
+});
+window.addEventListener('load',()=>{ document.getElementById('heroBg').classList.add('loaded'); });
+document.getElementById('hamburgerBtn').addEventListener('click',()=>document.getElementById('mobileMenu').classList.add('open'));
+function closeMobileMenu(){document.getElementById('mobileMenu').classList.remove('open')}
+
+// ─── SCROLL ANIMATIONS ───
+const obs=new IntersectionObserver(e=>e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible')}),{threshold:.1,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+
+// ─── INBOX INTERACTIVE ───
+function selectInboxItem(item){
+  document.querySelectorAll('.inbox-item').forEach(i=>i.classList.remove('active'));
+  item.classList.add('active');
+  const img=item.dataset.img, title=item.dataset.title, sub=item.dataset.sub;
+  const vi=document.getElementById('inboxViewerImg');
+  vi.classList.add('switching');
+  setTimeout(()=>{
+    vi.src=img; vi.alt=title;
+    document.getElementById('inboxViewerTitle').textContent=title;
+    document.getElementById('inboxViewerSub').textContent=sub;
+    vi.classList.remove('switching');
+  },240);
+}
+
+// ─── NGŨ HÀNH TABS ───
+function switchHanh(h){
+  document.querySelectorAll('.hanh-tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.hanh-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelector('.hanh-tab[data-h="'+h+'"]').classList.add('active');
+  document.getElementById('hp-'+h).classList.add('active');
+}
+
+// ─── FAQ ───
+function toggleFaq(item){
+  const open=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(f=>f.classList.remove('open'));
+  if(!open) item.classList.add('open');
+}
+
+// ─── CART ───
+let cart=[];
+try{cart=JSON.parse(localStorage.getItem('ngCart')||'[]')}catch(e){cart=[]}
+
+function saveCart(){localStorage.setItem('ngCart',JSON.stringify(cart));renderCart();updateBadge()}
+function updateBadge(){
+  const total=cart.reduce((s,i)=>s+i.qty,0);
+  const badge=document.getElementById('cartBadge');
+  badge.textContent=total;
+  badge.classList.toggle('show',total>0);
+  document.getElementById('cartHdrCount').textContent=total+' sản phẩm';
+}
+function formatPrice(n){return n.toLocaleString('vi-VN')+'đ'}
+
+function addToCart(product){
+  const existing=cart.find(i=>i.id===product.id);
+  if(existing){existing.qty++}else{cart.push({...product,qty:1})}
+  saveCart();
+  // flash effect
+  const btn=document.getElementById('navCartBtn');
+  btn.style.transform='scale(1.25)';
+  setTimeout(()=>btn.style.transform='',300);
+}
+function addToCartAndOpen(product){addToCart(product);openCart()}
+
+function renderCart(){
+  const body=document.getElementById('cartBody');
+  const footer=document.getElementById('cartFooter');
+  if(cart.length===0){
+    body.innerHTML=`<div class="cart-empty"><div class="cart-empty-icon">🛒</div><div class="cart-empty-title">Giỏ hàng trống</div><p class="cart-empty-sub">Thêm sản phẩm vào giỏ để bắt đầu nghi thức của bạn.</p><a href="#banggia" onclick="closeCart()" style="margin-top:8px;font-size:13px;color:var(--green-dark);font-weight:500;font-family:var(--f-body)">Xem bảng giá →</a></div>`;
+    footer.style.display='none';
+  } else {
+    let html='',total=0;
+    cart.forEach(item=>{
+      total+=item.price*item.qty;
+      html+=`<div class="cart-item">
+        <div class="cart-item-img-ph">${item.emoji||'🌿'}</div>
+        <div class="cart-item-info">
+          <div class="cart-item-name">${item.name}</div>
+          <div class="cart-item-variant">${formatPrice(item.price)}/sản phẩm</div>
+          <div class="cart-item-row">
+            <div class="qty-control">
+              <button class="qty-btn" onclick="changeQty('${item.id}',-1)">−</button>
+              <span class="qty-val">${item.qty}</span>
+              <button class="qty-btn" onclick="changeQty('${item.id}',1)">+</button>
+            </div>
+            <div style="display:flex;align-items:center;gap:4px">
+              <span class="cart-item-price">${formatPrice(item.price*item.qty)}</span>
+              <button class="cart-item-remove" onclick="removeItem('${item.id}')"><svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </div>`;
+    });
+    body.innerHTML=html;
+    footer.style.display='block';
+    document.getElementById('cartSubtotal').textContent=formatPrice(total);
+  }
+}
+function changeQty(id,delta){
+  const item=cart.find(i=>i.id===id);
+  if(item){item.qty+=delta;if(item.qty<=0)cart=cart.filter(i=>i.id!==id)}
+  saveCart();
+}
+function removeItem(id){cart=cart.filter(i=>i.id!==id);saveCart()}
+function openCart(){
+  document.getElementById('cartOverlay').classList.add('open');
+  document.getElementById('cartDrawer').classList.add('open');
+  document.body.style.overflow='hidden';
+  renderCart();
+}
+function closeCart(){
+  document.getElementById('cartOverlay').classList.remove('open');
+  document.getElementById('cartDrawer').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+// ─── CHECKOUT ───
+let currentStep=1;
+function openCheckout(){
+  closeCart();
+  renderCoSummary();
+  document.getElementById('checkoutOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+  goStep(1);
+}
+function closeCheckout(){
+  document.getElementById('checkoutOverlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+function goStep(n){
+  // validate step 1
+  if(n===2&&currentStep===1){
+    const name=document.getElementById('f-name').value.trim();
+    const phone=document.getElementById('f-phone').value.trim();
+    const email=document.getElementById('f-email').value.trim();
+    const province=document.getElementById('f-province').value;
+    const ward=document.getElementById('f-ward').value.trim();
+    const street=document.getElementById('f-street').value.trim();
+    if(!name||!phone||!email||!province||!ward||!street){
+      alert('Vui lòng điền đầy đủ thông tin bắt buộc (*)');return;
+    }
+  }
+  currentStep=n;
+  document.querySelectorAll('.checkout-step').forEach(s=>s.classList.remove('active'));
+  document.getElementById('coStep'+n).classList.add('active');
+  ['csi1','csi2','csi3'].forEach((id,i)=>{
+    const el=document.getElementById(id);
+    el.classList.remove('current','done');
+    if(i+1<n) el.classList.add('done');
+    if(i+1===n) el.classList.add('current');
+  });
+  renderCoSummary();
+}
+function renderCoSummary(){
+  let html='',total=0;
+  cart.forEach(item=>{
+    total+=item.price*item.qty;
+    html+=`<div class="co-item"><div class="co-item-img-ph">${item.emoji||'🌿'}</div><div class="co-item-info"><div class="co-item-name">${item.name}</div><div class="co-item-variant">Số lượng: ${item.qty}</div></div><div class="co-item-price">${formatPrice(item.price*item.qty)}</div></div>`;
+  });
+  document.getElementById('coItems').innerHTML=html||'<p style="font-size:13px;color:rgba(255,255,255,.4);font-family:var(--f-body)">Giỏ hàng trống</p>';
+  document.getElementById('coSubtotal').textContent=formatPrice(total);
+  const ship=total>=890000?'Miễn phí':'35.000đ';
+  const shipAmt=total>=890000?0:35000;
+  document.getElementById('coShip').textContent=ship;
+  document.getElementById('coTotal').textContent=formatPrice(total+shipAmt);
+}
+function selectPayment(el,type){
+  document.querySelectorAll('.payment-method').forEach(m=>m.classList.remove('selected'));
+  el.classList.add('selected');
+  const box=document.getElementById('bankTransferBox');
+  if(box) box.classList.toggle('show',type==='bank');
+}
+function selectShip(el){
+  document.querySelectorAll('#coStep2 .payment-method').forEach(m=>m.classList.remove('selected'));
+  el.classList.add('selected');
+}
+function updateDistrict(){
+  const province=document.getElementById('f-province').value;
+  const districtMap={'Hà Nội':['Hoàn Kiếm','Đống Đa','Ba Đình','Cầu Giấy','Hai Bà Trưng','Hoàng Mai','Thanh Xuân','Long Biên','Nam Từ Liêm','Bắc Từ Liêm'],'TP. Hồ Chí Minh':['Quận 1','Quận 2','Quận 3','Quận 4','Quận 5','Bình Thạnh','Tân Bình','Phú Nhuận','Gò Vấp','Thủ Đức'],'Đà Nẵng':['Hải Châu','Thanh Khê','Sơn Trà','Ngũ Hành Sơn','Liên Chiểu','Cẩm Lệ']};
+  const sel=document.getElementById('f-district');
+  sel.innerHTML='<option value="">-- Chọn Quận/Huyện --</option>';
+  (districtMap[province]||['Quận/Huyện khác']).forEach(d=>{const o=document.createElement('option');o.value=d;o.textContent=d;sel.appendChild(o)});
+}
+function submitOrder(){
+  const orderCode='NH'+Date.now().toString().slice(-8);
+  // Show success
+  document.getElementById('checkoutLayout').innerHTML=`
+    <div class="checkout-success" style="grid-column:1/-1">
+      <div class="success-icon">🌿</div>
+      <div class="success-title">Đơn hàng đã được đặt!</div>
+      <div class="success-sub">"Cảm ơn bạn đã chọn dành 15 phút mỗi ngày cho chính mình. Đó là hành động dũng cảm nhất."</div>
+      <div class="success-order">
+        <div class="success-order-label">Mã đơn hàng</div>
+        <div class="success-order-code">#${orderCode}</div>
+      </div>
+      <div class="success-steps">
+        <div class="success-step-item"><div class="success-step-num">1</div><div class="success-step-text"><strong>Email xác nhận</strong> đã được gửi đến hộp thư của bạn trong vài phút.</div></div>
+        <div class="success-step-item"><div class="success-step-num">2</div><div class="success-step-text"><strong>Đóng gói & xuất kho</strong> trong vòng 24 giờ làm việc (T2–T7).</div></div>
+        <div class="success-step-item"><div class="success-step-num">3</div><div class="success-step-text"><strong>Giao đến bạn</strong> — bạn sẽ nhận được SMS tracking khi đơn hàng được giao cho đơn vị vận chuyển.</div></div>
+      </div>
+      <button onclick="closeCheckout();cart=[];saveCart();" style="background:var(--green-dark);color:#fff;padding:12px 32px;border-radius:100px;border:none;font-size:14px;font-weight:500;cursor:pointer;font-family:var(--f-body)">Về trang chủ</button>
+    </div>`;
+}
+
+// ─── CHECK-IN ───
+const hanhData={
+  moc:{name:'Mộc · CALM',emoji:'🌿',color:'#456B4E',bg:'#E8F1EB',title:'Hành của bạn hôm nay: MỘC 木',sub:'"Một tách trà xanh mát lành sẽ giúp bạn thanh lọc dòng suy nghĩ đang quá tải, trở về với nhịp thở bình thường."',tea:'🍵 Pha trà CALM (Mộc)',music:'🎵 Playlist: Forest Breath'},
+  hoa:{name:'Hỏa · RELEASE',emoji:'🔥',color:'#BA6341',bg:'#FAEEE8',title:'Hành của bạn hôm nay: HỎA 火',sub:'"Màu đỏ ấm của tách trà sẽ giúp bạn giải phóng những gì đang bị dồn nén, để cơ thể được thở dài thật sâu."',tea:'🍵 Pha trà RELEASE (Hỏa)',music:'🎵 Playlist: Fire & Flow'},
+  tho:{name:'Thổ · BALANCE',emoji:'⚖️',color:'#A07840',bg:'#F5EDD9',title:'Hành của bạn hôm nay: THỔ 土',sub:'"Vị ngọt nhẹ của tách trà vàng sẽ giúp bạn tìm lại điểm tựa bên trong, ổn định cảm xúc đang chao đảo."',tea:'🍵 Pha trà BALANCE (Thổ)',music:'🎵 Playlist: Earth & Roots'},
+  kim:{name:'Kim · COMFORT',emoji:'🤍',color:'#7A6B5A',bg:'#F2EDE6',title:'Hành của bạn hôm nay: KIM 金',sub:'"Hương thơm dịu dàng của tách trà trắng sẽ bao bọc bạn trong sự ấm áp khi cảm thấy cô đơn nhất."',tea:'🍵 Pha trà COMFORT (Kim)',music:'🎵 Playlist: Silver Lining'},
+  thuy:{name:'Thủy · RESTORE',emoji:'💧',color:'#3D5C7A',bg:'#E5EDF5',title:'Hành của bạn hôm nay: THỦY 水',sub:'"Tách trà đậm sâu như mặt nước tĩnh lặng — giúp bạn phục hồi năng lượng sau những ngày đã cho đi quá nhiều."',tea:'🍵 Pha trà RESTORE (Thủy)',music:'🎵 Playlist: Deep Waters'}
+};
+function selectEmotion(btn){
+  document.querySelectorAll('.emotion-btn').forEach(b=>{b.classList.remove('selected');b.style.borderColor='';b.style.background=''});
+  const h=btn.dataset.h,data=hanhData[h];
+  btn.classList.add('selected');
+  btn.style.borderColor=data.color;
+  btn.style.background=data.bg+'30';
+  setTimeout(()=>showCIResult(h,data),600);
+}
+function showCIResult(h,data){
+  const form=document.getElementById('ciForm');
+  form.style.transition='opacity .3s,transform .3s';
+  form.style.opacity='0';form.style.transform='translateY(-16px)';
+  setTimeout(()=>{
+    form.style.display='none';
+    const r=document.getElementById('ciResult');
+    document.getElementById('rBadge').textContent=data.emoji+' '+data.name;
+    document.getElementById('rBadge').style.background=data.bg;
+    document.getElementById('rBadge').style.color=data.color;
+    document.getElementById('rTitle').textContent=data.title;
+    document.getElementById('rSub').textContent=data.sub;
+    document.getElementById('rTea').textContent=data.tea;
+    document.getElementById('rMusic').textContent=data.music;
+    r.classList.add('show');
+  },300);
+}
+function resetCI(){
+  document.getElementById('ciResult').classList.remove('show');
+  const form=document.getElementById('ciForm');
+  form.style.display='block';form.style.opacity='0';form.style.transform='translateY(16px)';
+  document.querySelectorAll('.emotion-btn').forEach(b=>{b.classList.remove('selected');b.style.borderColor='';b.style.background=''});
+  setTimeout(()=>{form.style.transition='opacity .4s,transform .4s';form.style.opacity='1';form.style.transform='translateY(0)'},50);
+}
+
+// ─── LOGIN & REGISTER ───
+function openLogin(isRegister = false){
+  document.getElementById('authOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+  switchAuthTab(isRegister ? 'register' : 'login');
+}
+function closeAuth(){
+  document.getElementById('authOverlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+function switchAuthTab(tab){
+  const loginForm = document.getElementById('authLogin');
+  const registerForm = document.getElementById('authRegister');
+  const loginTab = document.getElementById('tabLogin');
+  const registerTab = document.getElementById('tabRegister');
+  
+  if (tab === 'login') {
+    loginForm.style.display = 'block';
+    registerForm.style.display = 'none';
+    loginTab.classList.add('active');
+    registerTab.classList.remove('active');
+  } else {
+    loginForm.style.display = 'none';
+    registerForm.style.display = 'block';
+    loginTab.classList.remove('active');
+    registerTab.classList.add('active');
+  }
+}
+function submitAuth(event, type) {
+  event.preventDefault();
+  closeAuth();
+  if (type === 'login') {
+    alert('Đăng nhập thành công! Chào mừng bạn quay trở lại.');
+  } else {
+    alert('Đăng ký thành công! Cùng bắt đầu hành trình của bạn nhé.');
+  }
+  document.querySelector('.nav-btn-login').innerHTML = 'Tài khoản <svg width="12" height="12" fill="none" stroke="currentColor" style="vertical-align:middle" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>';
+}
+
+// init
+updateBadge();
+renderCart();
+</script>
+<script src="script.js"></script>
+</body>
+</html>
