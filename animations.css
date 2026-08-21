@@ -1,0 +1,297 @@
+/* ═══════════════════════════════════════════════════
+   NGŨ HÀNH — ANIMATION SYSTEM
+   Triết lý: chậm như hơi thở, nhẹ như làn khói
+   ═══════════════════════════════════════════════════ */
+
+/* ─── REDUCE MOTION OVERRIDE ─── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  .cursor-dot, .cursor-ring { display: none !important; }
+}
+
+/* ─── SCROLL PROGRESS BAR ─── */
+#scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, #456b4e, #C8A04A, #456b4e);
+  z-index: 9999;
+  transition: width 0.1s linear;
+  pointer-events: none;
+}
+
+/* ─── CUSTOM CURSOR ─── */
+body { cursor: none; }
+a, button, [role="button"], label, select, input, textarea { cursor: none; }
+
+.cursor-dot {
+  position: fixed;
+  top: 0; left: 0;
+  width: 6px; height: 6px;
+  background: #fff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition: background 0.3s, transform 0.15s;
+  mix-blend-mode: difference;
+}
+
+.cursor-ring {
+  position: fixed;
+  top: 0; left: 0;
+  width: 36px; height: 36px;
+  border: 1.5px solid rgba(255,255,255,0.6);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99998;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s cubic-bezier(0.23,1,0.32,1),
+              height 0.4s cubic-bezier(0.23,1,0.32,1),
+              border-color 0.4s,
+              opacity 0.3s;
+  mix-blend-mode: difference;
+}
+
+.cursor-ring.hover {
+  width: 56px; height: 56px;
+  border-color: rgba(200,160,74,0.9);
+  background: rgba(200,160,74,0.07);
+}
+
+.cursor-ring.clicking {
+  transform: translate(-50%, -50%) scale(0.85);
+}
+
+/* ─── STAGGER REVEAL ─── */
+.stagger-parent .fade-up:nth-child(1) { transition-delay: 0s; }
+.stagger-parent .fade-up:nth-child(2) { transition-delay: 0.08s; }
+.stagger-parent .fade-up:nth-child(3) { transition-delay: 0.16s; }
+.stagger-parent .fade-up:nth-child(4) { transition-delay: 0.24s; }
+.stagger-parent .fade-up:nth-child(5) { transition-delay: 0.32s; }
+.stagger-parent .fade-up:nth-child(6) { transition-delay: 0.40s; }
+
+/* Section tag line reveal */
+.section-tag-line span,
+.section-tag {
+  position: relative;
+  overflow: hidden;
+}
+.section-tag-line span::after,
+.section-tag::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: currentColor;
+  transform: scaleX(1);
+  transform-origin: right;
+  transition: transform 0.7s cubic-bezier(0.77,0,0.175,1);
+}
+.visible .section-tag-line span::after,
+.visible .section-tag::after {
+  transform: scaleX(0);
+}
+
+/* ─── HERO GLOW ─── */
+.hero-h1 em {
+  position: relative;
+  display: inline-block;
+}
+.hero-h1 em::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  color: transparent;
+  text-shadow: 0 0 40px rgba(237,213,181,0.6), 0 0 80px rgba(237,213,181,0.3);
+  animation: hero-breathe 4s ease-in-out infinite;
+}
+@keyframes hero-breathe {
+  0%, 100% { opacity: 0.4; }
+  50%       { opacity: 1; }
+}
+
+/* ─── MAGNETIC BUTTON ─── */
+.btn-magnetic {
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1) !important;
+  will-change: transform;
+}
+
+/* ─── RIPPLE EFFECT ─── */
+.ripple-container {
+  position: relative;
+  overflow: hidden;
+}
+.ripple-wave {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.28);
+  transform: scale(0);
+  animation: ripple-expand 0.65s cubic-bezier(0.23,1,0.32,1) forwards;
+  pointer-events: none;
+}
+@keyframes ripple-expand {
+  to { transform: scale(4); opacity: 0; }
+}
+
+/* ─── AMBIENT BLOBS — CHECK-IN SECTION ─── */
+#checkin { position: relative; overflow: hidden; }
+
+.ci-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 2s ease, background 3s ease;
+  will-change: transform;
+}
+.ci-blob-1 {
+  width: 420px; height: 420px;
+  top: -80px; left: -100px;
+  animation: blob-drift-1 18s ease-in-out infinite alternate;
+}
+.ci-blob-2 {
+  width: 340px; height: 340px;
+  bottom: -60px; right: -80px;
+  animation: blob-drift-2 22s ease-in-out infinite alternate;
+}
+.ci-blob-3 {
+  width: 260px; height: 260px;
+  top: 50%; left: 50%;
+  margin-top: -130px; margin-left: -130px;
+  animation: blob-drift-3 14s ease-in-out infinite alternate;
+  opacity: 0.03 !important;
+}
+.ci-blob.visible-blob { opacity: 0.055; }
+
+@keyframes blob-drift-1 {
+  0%   { transform: translate(0, 0) scale(1); }
+  33%  { transform: translate(60px, 40px) scale(1.1); }
+  66%  { transform: translate(30px, 80px) scale(0.95); }
+  100% { transform: translate(80px, 20px) scale(1.05); }
+}
+@keyframes blob-drift-2 {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(-50px, -60px) scale(1.15); }
+  100% { transform: translate(-80px, -20px) scale(0.9); }
+}
+@keyframes blob-drift-3 {
+  0%   { transform: translate(0, 0) scale(1) rotate(0deg); }
+  100% { transform: translate(20px, -30px) scale(1.2) rotate(20deg); }
+}
+
+/* ─── FLOATING KANJI ─── */
+#nguhanh { position: relative; overflow: hidden; }
+
+.kanji-float {
+  position: absolute;
+  font-family: serif;
+  font-size: clamp(60px, 8vw, 120px);
+  font-weight: 700;
+  color: rgba(0,0,0,0.04);
+  pointer-events: none;
+  user-select: none;
+  animation: kanji-rise linear infinite;
+  will-change: transform;
+  z-index: 0;
+}
+@keyframes kanji-rise {
+  0%   { transform: translateY(0) rotate(-5deg); opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { transform: translateY(-120px) rotate(5deg); opacity: 0; }
+}
+
+/* ─── HANH TAB — SLIDING PILL ─── */
+.hanh-tabs {
+  position: relative;
+}
+.hanh-tab-pill {
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  background: var(--green-dark);
+  border-radius: 100px;
+  transition: left 0.45s cubic-bezier(0.23,1,0.32,1),
+              width 0.45s cubic-bezier(0.23,1,0.32,1),
+              background 0.4s;
+  pointer-events: none;
+  z-index: 0;
+}
+.hanh-tab {
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s !important;
+}
+.hanh-tab.active {
+  background: transparent !important;
+  border-color: transparent !important;
+  color: #fff !important;
+}
+
+/* ─── MARQUEE SLOW ON HOVER ─── */
+.marquee-strip:hover .marquee-track {
+  animation-play-state: paused;
+}
+.marquee-strip {
+  cursor: pointer;
+}
+
+/* ─── COUNTER ANIMATION ─── */
+.price-amt[data-target] {
+  transition: none;
+}
+
+/* ─── SCROLL FADE — ENHANCED ─── */
+.fade-up { transition: opacity 0.75s cubic-bezier(0.23,1,0.32,1), transform 0.75s cubic-bezier(0.23,1,0.32,1); }
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+
+/* ─── IMAGE 3D PARALLAX HOVER ─── */
+.inbox-viewer {
+  perspective: 800px;
+}
+.inbox-viewer-img {
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.23,1,0.32,1) !important;
+  will-change: transform;
+}
+
+/* ─── CART BUTTON FEEDBACK ─── */
+.btn-add-cart.adding,
+.btn-add-hanh.adding {
+  animation: cart-bounce 0.4s cubic-bezier(0.23,1,0.32,1);
+}
+@keyframes cart-bounce {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(0.88); }
+  70%  { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+
+/* ─── TOAST NOTIFICATION ─── */
+.ng-toast {
+  position: fixed;
+  bottom: 30px; left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--green-dark);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 100px;
+  font-family: var(--f-body);
+  font-size: 13px;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.35s, transform 0.35s cubic-bezier(0.23,1,0.32,1);
+  z-index: 99990;
+  pointer-events: none;
+  white-space: nowrap;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+.ng-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}

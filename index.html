@@ -14,6 +14,7 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
 </head>
 
 <body>
@@ -23,8 +24,7 @@
         <a href="#" class="nav-logo" style="text-decoration: none;">
             <img src="photos/logo.png" alt="Ngũ Hành Logo"
                 style="height:40px; border-radius:50%; box-shadow:0 2px 10px rgba(0,0,0,0.1)">
-            Ngũ Hành <span style="font-family: var(--f-body); font-weight: 400; font-size: 15px; opacity: 0.85;">·
-                Self-Care</span>
+            <div style="display:flex;align-items:center;gap:6px">Ngũ Hành <span style="font-family: var(--f-body); font-weight: 400; font-size: 15px; opacity: 0.85; transform: translateY(1px);">· Self-Care</span></div>
         </a>
         <ul class="nav-links">
             <li><a href="#cauchuyen">Câu chuyện</a></li>
@@ -68,11 +68,11 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <div class="hero-pill"><span class="hero-pill-dot"></span>Trạm sạc cảm xúc · Ra mắt 2026</div>
-            <h1 class="hero-h1">15 phút mỗi ngày<br>để trở về với <em>chính mình.</em></h1>
+            <h1 class="hero-h1">15 phút mỗi ngày<br>để trở về với <em data-text="chính mình.">chính mình.</em></h1>
             <p class="hero-p">Ngũ Hành Self-Care Box là bộ nghi thức chăm sóc cảm xúc tại nhà. Một tách trà, một hơi
                 hương thảo mộc, một trang journal — đủ để bạn ngắt kết nối và về lại với bản thân.</p>
             <div class="hero-actions">
-                <a href="#banggia" class="btn-primary">Đặt hộp đầu tiên · từ 690K <svg width="15" height="15"
+                <a href="#banggia" class="btn-primary">Đặt hộp đầu tiên · từ 299K <svg width="15" height="15"
                         fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -345,7 +345,7 @@
                                     <div class="inbox-detail-cta">
                                         <span class="inbox-detail-price">Có trong Full Box</span>
                                         <button class="btn-add-cart"
-                                            onclick="event.stopPropagation();addToCart({id:'box',name:'Ngũ Hành Full Box',price:1290000,emoji:'🌿'})"><svg
+                                            onclick="event.stopPropagation();addToCart({id:'box',name:'Ngũ Hành Full Box',price:599000,emoji:'🌿'})"><svg
                                                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                     d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -387,7 +387,7 @@
                                     <div class="inbox-detail-cta">
                                         <span class="inbox-detail-price">Có trong Full Box</span>
                                         <button class="btn-add-cart"
-                                            onclick="event.stopPropagation();addToCart({id:'box',name:'Ngũ Hành Full Box',price:1290000,emoji:'🌿'})"><svg
+                                            onclick="event.stopPropagation();addToCart({id:'box',name:'Ngũ Hành Full Box',price:599000,emoji:'🌿'})"><svg
                                                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                     d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -429,7 +429,7 @@
                                     <div class="inbox-detail-cta">
                                         <span class="inbox-detail-price">Có trong Full Box</span>
                                         <button class="btn-add-cart"
-                                            onclick="event.stopPropagation();addToCart({id:'box',name:'Ngũ Hành Full Box',price:1290000,emoji:'🌿'})"><svg
+                                            onclick="event.stopPropagation();addToCart({id:'box',name:'Ngũ Hành Full Box',price:599000,emoji:'🌿'})"><svg
                                                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                     d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -513,7 +513,7 @@
                                     <div class="inbox-detail-cta">
                                         <span class="inbox-detail-price">Miễn phí khi mua hộp</span>
                                         <button class="btn-add-cart"
-                                            onclick="event.stopPropagation();addToCart({id:'starter',name:'Starter Kit',price:690000,emoji:'✨'})"><svg
+                                            onclick="event.stopPropagation();addToCart({id:'starter',name:'Starter Kit',price:299000,emoji:'✨'})"><svg
                                                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                     d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -584,9 +584,9 @@
                             để làm gì?"</div>
                     </div>
                     <div class="hp-price-row">
-                        <div class="hp-price">Từ 690.000đ</div>
+                        <div class="hp-price">Từ 299.000đ</div>
                         <button class="btn-add-hanh" style="background:var(--moc)"
-                            onclick="addToCart({id:'starter',name:'Starter Kit (Mộc CALM)',price:690000,emoji:'🌿'})">+
+                            onclick="addToCart({id:'starter',name:'Starter Kit (Mộc CALM)',price:299000,emoji:'🌿'})">+
                             Thêm vào giỏ</button>
                     </div>
                 </div>
@@ -625,9 +625,9 @@
                             mình? Nếu mình không cần phải giải quyết nó ngay hôm nay, mình cảm thấy thế nào?"</div>
                     </div>
                     <div class="hp-price-row">
-                        <div class="hp-price">Từ 690.000đ</div>
+                        <div class="hp-price">Từ 299.000đ</div>
                         <button class="btn-add-hanh" style="background:var(--hoa)"
-                            onclick="addToCart({id:'starter',name:'Starter Kit (Hỏa RELEASE)',price:690000,emoji:'🔥'})">+
+                            onclick="addToCart({id:'starter',name:'Starter Kit (Hỏa RELEASE)',price:299000,emoji:'🔥'})">+
                             Thêm vào giỏ</button>
                     </div>
                 </div>
@@ -665,9 +665,9 @@
                             nhất? Có điều gì trong cuộc sống hiện tại đang là điểm tựa cho mình không?"</div>
                     </div>
                     <div class="hp-price-row">
-                        <div class="hp-price">Từ 690.000đ</div>
+                        <div class="hp-price">Từ 299.000đ</div>
                         <button class="btn-add-hanh" style="background:var(--tho)"
-                            onclick="addToCart({id:'starter',name:'Starter Kit (Thổ BALANCE)',price:690000,emoji:'⚖️'})">+
+                            onclick="addToCart({id:'starter',name:'Starter Kit (Thổ BALANCE)',price:299000,emoji:'⚖️'})">+
                             Thêm vào giỏ</button>
                     </div>
                 </div>
@@ -706,9 +706,9 @@
                             lắng nghe, được ôm, hay được yên tĩnh? Mình có thể cho bản thân mình điều đó không?"</div>
                     </div>
                     <div class="hp-price-row">
-                        <div class="hp-price">Từ 690.000đ</div>
+                        <div class="hp-price">Từ 299.000đ</div>
                         <button class="btn-add-hanh" style="background:var(--kim)"
-                            onclick="addToCart({id:'starter',name:'Starter Kit (Kim COMFORT)',price:690000,emoji:'🤍'})">+
+                            onclick="addToCart({id:'starter',name:'Starter Kit (Kim COMFORT)',price:299000,emoji:'🤍'})">+
                             Thêm vào giỏ</button>
                     </div>
                 </div>
@@ -751,9 +751,9 @@
                             sự nghỉ ngơi?"</div>
                     </div>
                     <div class="hp-price-row">
-                        <div class="hp-price">Từ 690.000đ</div>
+                        <div class="hp-price">Từ 299.000đ</div>
                         <button class="btn-add-hanh" style="background:var(--thuy)"
-                            onclick="addToCart({id:'starter',name:'Starter Kit (Thủy RESTORE)',price:690000,emoji:'💧'})">+
+                            onclick="addToCart({id:'starter',name:'Starter Kit (Thủy RESTORE)',price:299000,emoji:'💧'})">+
                             Thêm vào giỏ</button>
                     </div>
                 </div>
@@ -775,16 +775,11 @@
                     <div class="ci-step-label">Chọn trạng thái gần nhất với bạn lúc này</div>
                     <div class="ci-question">Nếu cảm xúc của bạn lúc này là một từ, đó sẽ là...?</div>
                     <div class="emotion-grid">
-                        <button class="emotion-btn" data-h="moc" onclick="selectEmotion(this)"><span
-                                class="e-emoji">😰</span><span class="e-label">Lo âu<br>Overthinking</span></button>
-                        <button class="emotion-btn" data-h="hoa" onclick="selectEmotion(this)"><span
-                                class="e-emoji">😤</span><span class="e-label">Căng thẳng<br>Dồn nén</span></button>
-                        <button class="emotion-btn" data-h="tho" onclick="selectEmotion(this)"><span
-                                class="e-emoji">😶</span><span class="e-label">Mất phương<br>hướng</span></button>
-                        <button class="emotion-btn" data-h="kim" onclick="selectEmotion(this)"><span
-                                class="e-emoji">😔</span><span class="e-label">Buồn bã<br>Cô đơn</span></button>
-                        <button class="emotion-btn" data-h="thuy" onclick="selectEmotion(this)"><span
-                                class="e-emoji">😮‍💨</span><span class="e-label">Kiệt sức<br>Burnout</span></button>
+                        <button class="emotion-btn" data-h="moc" onclick="selectEmotion(this)"><div class="e-svg-icon" data-h="moc"><svg viewBox="0 0 60 60" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="icon-path" d="M30 30 C36 26 42 28 42 34 C42 42 34 46 26 43 C18 40 14 32 16 24 C18 16 26 10 34 10 C44 10 52 18 52 30 C52 44 42 54 28 54"/></svg></div><span class="e-label">Lo âu<br>Overthinking</span></button>
+                        <button class="emotion-btn" data-h="hoa" onclick="selectEmotion(this)"><div class="e-svg-icon" data-h="hoa"><svg viewBox="0 0 60 60" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline class="icon-path" points="18,12 42,12 18,20 42,20 18,28 42,28 18,36 42,36 18,44 42,44 18,52 42,52"/></svg></div><span class="e-label">Căng thẳng<br>Dồn nén</span></button>
+                        <button class="emotion-btn" data-h="tho" onclick="selectEmotion(this)"><div class="e-svg-icon" data-h="tho"><svg viewBox="0 0 60 60" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle class="icon-fill" cx="30" cy="30" r="3" fill="currentColor" stroke="none"/><line class="icon-path" x1="30" y1="30" x2="16" y2="16"/><polyline class="icon-path" points="22,16 16,16 16,22"/><line class="icon-path" x1="30" y1="30" x2="44" y2="16"/><polyline class="icon-path" points="38,16 44,16 44,22"/><line class="icon-path" x1="30" y1="30" x2="16" y2="44"/><polyline class="icon-path" points="16,38 16,44 22,44"/><line class="icon-path" x1="30" y1="30" x2="44" y2="44"/><polyline class="icon-path" points="44,38 44,44 38,44"/><line class="icon-path" x1="30" y1="30" x2="50" y2="28"/><polyline class="icon-path" points="44,24 50,28 44,32"/></svg></div><span class="e-label">Mất phương<br>hướng</span></button>
+                        <button class="emotion-btn" data-h="kim" onclick="selectEmotion(this)"><div class="e-svg-icon" data-h="kim"><svg viewBox="0 0 60 60" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="icon-path" d="M30 8 C30 8 46 30 46 40 C46 49.4 38.8 55 30 55 C21.2 55 14 49.4 14 40 C14 30 30 8 30 8Z"/></svg></div><span class="e-label">Buồn bã<br>Cô đơn</span></button>
+                        <button class="emotion-btn" data-h="thuy" onclick="selectEmotion(this)"><div class="e-svg-icon" data-h="thuy"><svg viewBox="0 0 60 60" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect class="icon-path" x="22" y="30" width="16" height="20" rx="2"/><line class="icon-path" x1="30" y1="30" x2="30" y2="24"/><path class="icon-path" d="M30 24 C28 20 29 17 30 15 C31 17 32 20 30 24Z"/><line class="icon-path" x1="25" y1="37" x2="35" y2="37"/><line class="icon-path" x1="25" y1="43" x2="35" y2="43"/><path class="icon-path" d="M22 36 C19 39 19 44 21 46"/></svg></div><span class="e-label">Kiệt sức<br>Burnout</span></button>
                     </div>
                 </div>
                 <div class="ci-result" id="ciResult">
@@ -956,7 +951,7 @@
                     <div class="price-sub-tag">Thử nghi thức · 7 ngày</div>
                     <p class="price-desc">Đủ để bạn nếm thử trọn vẹn nghi thức trong tuần đầu tiên. Gói trà mix, journal
                         mini và Aroma Spray.</p>
-                    <div class="price-amt">690.000<span style="font-size:16px">đ</span></div>
+                    <div class="price-amt">299.000<span style="font-size:16px">đ</span></div>
                     <ul class="price-features">
                         <li><svg class="pf-check" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
@@ -976,7 +971,7 @@
                             </svg>QR Ritual Card (7 ngày)</li>
                     </ul>
                     <button class="price-btn pbtn-dark"
-                        onclick="addToCartAndOpen({id:'starter',name:'Starter Kit',price:690000,emoji:'✨'})">
+                        onclick="addToCartAndOpen({id:'starter',name:'Starter Kit',price:299000,emoji:'✨'})">
                         <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -991,8 +986,8 @@
                     <div class="price-sub-tag">Trọn bộ 5 Hành · 21 ngày</div>
                     <p class="price-desc">Trải nghiệm đủ 5 Hành, dùng trong 3-4 tuần. Gift-ready, kèm thiệp handwritten
                         theo yêu cầu.</p>
-                    <div class="price-amt">1.290.000<span style="font-size:16px">đ</span></div>
-                    <div class="price-old">Giá gốc: 1.590.000đ · Tiết kiệm 300K</div>
+                    <div class="price-amt">599.000<span style="font-size:16px">đ</span></div>
+                    <div class="price-old">Giá gốc: 899.000đ · Tiết kiệm 300K</div>
                     <ul class="price-features">
                         <li><svg class="pf-check" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
@@ -1020,7 +1015,7 @@
                             </svg>Thiệp handwritten miễn phí</li>
                     </ul>
                     <button class="price-btn pbtn-white"
-                        onclick="addToCartAndOpen({id:'box',name:'Ngũ Hành Full Box',price:1290000,emoji:'🌿'})">
+                        onclick="addToCartAndOpen({id:'box',name:'Ngũ Hành Full Box',price:599000,emoji:'🌿'})">
                         <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -1034,7 +1029,7 @@
                     <div class="price-sub-tag">Đăng ký hàng tháng</div>
                     <p class="price-desc">Mỗi tháng một hộp tinh gọn, playlist mới, prompts mới. Hủy bất kỳ lúc nào,
                         không hỏi lý do.</p>
-                    <div class="price-amt">890.000<span style="font-size:16px">đ</span><span
+                    <div class="price-amt">399.000<span style="font-size:16px">đ</span><span
                             class="price-unit">/tháng</span></div>
                     <ul class="price-features">
                         <li><svg class="pf-check" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1059,12 +1054,12 @@
                             </svg>Hủy bất kỳ lúc nào</li>
                     </ul>
                     <button class="price-btn pbtn-dark"
-                        onclick="addToCartAndOpen({id:'sub',name:'Ritual Subscription (tháng đầu)',price:890000,emoji:'🔄'})">
+                        onclick="addToCartAndOpen({id:'sub',name:'Ritual Subscription (tháng đầu)',price:399000,emoji:'🔄'})">
                         <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                         </svg>
-                        Đăng ký ngay
+                        Thêm vào giỏ
                     </button>
                 </div>
             </div>
@@ -1072,7 +1067,7 @@
                     viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>Đổi trả 14 ngày · Freeship đơn từ 890K · Thanh toán khi nhận hàng (COD)</div>
+                </svg>Đổi trả 14 ngày · Freeship đơn từ 399K · Thanh toán khi nhận hàng (COD)</div>
         </div>
     </section>
 
@@ -1150,7 +1145,7 @@
                     <div class="faq-wrap">
                         <div class="faq-wrap-inner">
                             <div class="faq-a">Ship toàn quốc qua Giao Hàng Nhanh và J&T. Thời gian: Hà Nội & TP.HCM 1-2
-                                ngày, các tỉnh thành khác 2-4 ngày. Đơn hàng trên 890K được miễn phí vận chuyển. Bạn có
+                                ngày, các tỉnh thành khác 2-4 ngày. Đơn hàng trên 399K được miễn phí vận chuyển. Bạn có
                                 thể theo dõi đơn hàng qua email xác nhận.</div>
                         </div>
                     </div>
@@ -1204,7 +1199,7 @@
                         do.</p>
                     <div class="cta-actions">
                         <button class="cta-btn-white"
-                            onclick="addToCartAndOpen({id:'box',name:'Ngũ Hành Full Box',price:1290000,emoji:'🌿'})">Đặt
+                            onclick="addToCartAndOpen({id:'box',name:'Ngũ Hành Full Box',price:599000,emoji:'🌿'})">Đặt
                             hộp ngay <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -1225,24 +1220,29 @@
                             style="width:26px; height:26px; border-radius:50%"> Ngũ Hành · Self-Care</div>
                     <p class="f-brand-desc">Chậm lại một chút. Một cuộc đời tốt đẹp không được xây bằng những buổi tối
                         bồn chồn. Chúng mình gói ghém 15 phút mỗi ngày để bạn về được với chính mình.</p>
-                    <div class="f-socials">
-                        <a href="https://www.instagram.com/nguhanhselfcarebox" target="_blank" class="f-social-btn"
-                            aria-label="Instagram"><svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-                            </svg></a>
-                        <a href="#" class="f-social-btn" aria-label="TikTok"><svg width="15" height="15"
-                                fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V9.07a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.5z" />
-                            </svg></a>
-                        <a href="#" class="f-social-btn" aria-label="Facebook"><svg width="15" height="15"
-                                fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                            </svg></a>
+                    
+                    <div class="f-newsletter">
+                        <h4>Nhận bản tin chăm sóc cảm xúc</h4>
+                        <form onsubmit="event.preventDefault()">
+                            <input type="email" placeholder="Email của bạn" required>
+                            <button type="submit">Đăng ký</button>
+                        </form>
                     </div>
-                </div>
+
+                    <div class="f-socials">
+                        <a href="https://www.instagram.com/nguhanhselfcarebox" target="_blank" class="f-social-btn" aria-label="Instagram"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                            </svg></a>
+                        <a href="#" class="f-social-btn" aria-label="TikTok"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V9.07a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.5z"/>
+                            </svg></a>
+                        <a href="#" class="f-social-btn" aria-label="Facebook"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg></a>
+                        <a href="#" class="f-social-btn" aria-label="Spotify"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.54.659.301 1.02zm1.44-3.3c-.301.42-.84.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.84.241 1.2zM19.08 9.3C15.24 7.02 8.82 6.84 5.1 7.98c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.32-1.26 11.28-1.02 15.721 1.62.54.3.72.96.42 1.5-.24.54-.9.72-1.5.3z"/>
+                            </svg></a>
+                    </div></div>
                 <div>
                     <h4 class="f-col-title">Khám phá</h4>
                     <ul class="f-links">
@@ -1314,7 +1314,7 @@
                 <span class="cart-subtotal-label">Tạm tính</span>
                 <span class="cart-subtotal-val" id="cartSubtotal">0đ</span>
             </div>
-            <div class="cart-ship-note">✓ Miễn phí vận chuyển cho đơn từ 890.000đ</div>
+            <div class="cart-ship-note">✓ Miễn phí vận chuyển cho đơn từ 399.000đ</div>
             <button class="cart-checkout-btn" onclick="openCheckout()">Tiến hành thanh toán <svg width="15" height="15"
                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -1418,13 +1418,13 @@
                                 <input type="radio" name="shipping" value="fast" checked>
                                 <span class="pm-icon">⚡</span>
                                 <div class="pm-label"><strong>Giao hàng nhanh (1-2 ngày)</strong><span>35.000đ · Miễn
-                                        phí cho đơn từ 890K</span></div>
+                                        phí cho đơn từ 399K</span></div>
                             </label>
                             <label class="payment-method" id="ship-eco" onclick="selectShip(this)">
                                 <input type="radio" name="shipping" value="eco">
                                 <span class="pm-icon">🚚</span>
                                 <div class="pm-label"><strong>Giao hàng tiết kiệm (3-5 ngày)</strong><span>20.000đ ·
-                                        Miễn phí cho đơn từ 890K</span></div>
+                                        Miễn phí cho đơn từ 399K</span></div>
                             </label>
                         </div>
                         <div class="checkout-form-nav">
@@ -1589,7 +1589,7 @@
             document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 55);
             // parallax hero
             const s = window.scrollY, bg = document.getElementById('heroBg');
-            if (bg && s < window.innerHeight) bg.style.transform = `scale(1.06) translateY(${s * .22}px)`;
+            if (bg && s < window.innerHeight) bg.style.transform = `scale(1.06) translateY(${s * -0.35}px)`;
         });
         window.addEventListener('load', () => { document.getElementById('heroBg').classList.add('loaded'); });
         document.getElementById('hamburgerBtn').addEventListener('click', () => document.getElementById('mobileMenu').classList.add('open'));
@@ -1751,8 +1751,8 @@
             });
             document.getElementById('coItems').innerHTML = html || '<p style="font-size:13px;color:rgba(255,255,255,.4);font-family:var(--f-body)">Giỏ hàng trống</p>';
             document.getElementById('coSubtotal').textContent = formatPrice(total);
-            const ship = total >= 890000 ? 'Miễn phí' : '35.000đ';
-            const shipAmt = total >= 890000 ? 0 : 35000;
+            const ship = total >= 399000 ? 'Miễn phí' : '35.000đ';
+            const shipAmt = total >= 399000 ? 0 : 35000;
             document.getElementById('coShip').textContent = ship;
             document.getElementById('coTotal').textContent = formatPrice(total + shipAmt);
         }
@@ -1879,6 +1879,7 @@
         renderCart();
     </script>
     <script src="script.js"></script>
+    <script src="animations.js" defer></script>
 
     <!-- CỘNG ĐỒNG MODAL -->
     <div class="modal-overlay" id="cdModal" onclick="closeCongDongModal()">

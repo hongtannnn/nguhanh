@@ -796,3 +796,192 @@ body::before {
 }
 
 /* Removed to restore original dark green footer */
+
+/* EMOTION AURAS */
+.e-aura {
+    width: 36px;
+    height: 36px;
+    margin: 0 auto 12px;
+    border-radius: 50%;
+    position: relative;
+}
+
+/* Lo âu - Tangled/Swirling (Mộc) */
+.aura-moc {
+    background: conic-gradient(from 0deg, var(--moc-bg), var(--moc), var(--moc-bg));
+    animation: spin 3s linear infinite;
+    filter: blur(3px);
+}
+
+/* Căng thẳng - Pulsing Fire (Hỏa) */
+.aura-hoa {
+    background: radial-gradient(circle, var(--hoa) 20%, transparent 70%);
+    animation: pulse-fire 1s ease-in-out infinite alternate;
+    box-shadow: 0 0 15px var(--hoa);
+}
+
+/* Mất phương hướng - Blurred/Scattered (Thổ) */
+.aura-tho {
+    background: repeating-linear-gradient(45deg, var(--tho), var(--tho) 2px, transparent 2px, transparent 6px);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    animation: morph-tho 4s ease-in-out infinite alternate;
+    opacity: 0.7;
+}
+
+/* Buồn bã - Heavy drop / fading (Kim) */
+.aura-kim {
+    background: linear-gradient(to bottom, transparent, var(--kim) 80%);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    animation: sway-kim 3s ease-in-out infinite alternate;
+}
+
+/* Kiệt sức - Fading ripple (Thủy) */
+.aura-thuy {
+    border: 2px solid var(--thuy);
+    background: transparent;
+    animation: ripple-thuy 2s infinite cubic-bezier(0.1, 0.5, 0.3, 1);
+}
+
+@keyframes spin { 100% { transform: rotate(360deg); } }
+@keyframes pulse-fire { 0% { transform: scale(0.9); opacity: 0.8; } 100% { transform: scale(1.1); opacity: 1; } }
+@keyframes morph-tho { 
+    0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; } 
+    100% { border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%; transform: rotate(10deg); } 
+}
+@keyframes sway-kim { 
+    0% { transform: translateY(-4px); opacity: 0.8; } 
+    100% { transform: translateY(4px); opacity: 0.4; } 
+}
+@keyframes ripple-thuy { 
+    0% { transform: scale(0.6); opacity: 1; } 
+    100% { transform: scale(1.4); opacity: 0; } 
+}
+
+
+/* ===== SVG LINE ART EMOTION ICONS ===== */
+.e-svg-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: filter 0.4s ease, transform 0.4s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.e-svg-icon svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* Màu mặc định (mờ) theo từng Hành */
+.e-svg-icon[data-h="moc"] { color: rgba(100, 160, 120, 0.5); }
+.e-svg-icon[data-h="hoa"] { color: rgba(210, 100, 60, 0.5); }
+.e-svg-icon[data-h="tho"] { color: rgba(185, 150, 70, 0.5); }
+.e-svg-icon[data-h="kim"] { color: rgba(190, 180, 170, 0.5); }
+.e-svg-icon[data-h="thuy"] { color: rgba(80, 140, 210, 0.5); }
+
+/* Đường nét mặc định luôn hiển thị */
+.icon-path {
+  stroke: currentColor;
+  stroke-dasharray: 600;
+  stroke-dashoffset: 0;
+}
+
+.icon-fill {
+  fill: currentColor;
+  transition: fill 0.4s ease;
+}
+
+/* Hover: sáng lên + glow + animation vẽ lại nét */
+.emotion-btn:hover .e-svg-icon[data-h="moc"] { color: rgba(110, 185, 135, 1); filter: drop-shadow(0 0 10px rgba(110, 185, 135, 0.55)); }
+.emotion-btn:hover .e-svg-icon[data-h="hoa"] { color: rgba(225, 100, 55, 1); filter: drop-shadow(0 0 10px rgba(225, 100, 55, 0.55)); }
+.emotion-btn:hover .e-svg-icon[data-h="tho"] { color: rgba(200, 165, 72, 1); filter: drop-shadow(0 0 10px rgba(200, 165, 72, 0.55)); }
+.emotion-btn:hover .e-svg-icon[data-h="kim"] { color: rgba(218, 208, 198, 1); filter: drop-shadow(0 0 10px rgba(218, 208, 198, 0.45)); }
+.emotion-btn:hover .e-svg-icon[data-h="thuy"] { color: rgba(80, 155, 238, 1); filter: drop-shadow(0 0 10px rgba(80, 155, 238, 0.55)); }
+
+.emotion-btn:hover .icon-path {
+  animation: svg-redraw 0.9s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes svg-redraw {
+  0% { stroke-dashoffset: 600; }
+  100% { stroke-dashoffset: 0; }
+}
+
+/* Selected */
+.emotion-btn.selected .e-svg-icon[data-h="moc"] { color: #64b478; filter: drop-shadow(0 0 16px rgba(100, 180, 130, 0.85)); }
+.emotion-btn.selected .e-svg-icon[data-h="hoa"] { color: #d9614a; filter: drop-shadow(0 0 16px rgba(217, 97, 74, 0.85)); }
+.emotion-btn.selected .e-svg-icon[data-h="tho"] { color: #c8a04a; filter: drop-shadow(0 0 16px rgba(200, 160, 74, 0.85)); }
+.emotion-btn.selected .e-svg-icon[data-h="kim"] { color: #d8d0c8; filter: drop-shadow(0 0 16px rgba(216, 208, 200, 0.75)); }
+.emotion-btn.selected .e-svg-icon[data-h="thuy"] { color: #5096eb; filter: drop-shadow(0 0 16px rgba(80, 150, 235, 0.85)); }
+
+.emotion-btn:hover .e-svg-icon,
+.emotion-btn.selected .e-svg-icon {
+  transform: scale(1.12);
+}
+
+
+/* FOOTER NEWSLETTER */
+.f-newsletter {
+    margin-bottom: 24px;
+}
+.f-newsletter h4 {
+    font-size: 14px;
+    margin-bottom: 12px;
+    font-weight: 500;
+    font-family: var(--f-display);
+}
+.f-newsletter form {
+    display: flex;
+    gap: 8px;
+    max-width: 320px;
+}
+.f-newsletter input {
+    flex: 1;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 100px;
+    padding: 10px 16px;
+    color: white;
+    font-family: var(--f-body);
+    font-size: 13px;
+    outline: none;
+    transition: var(--t);
+}
+.f-newsletter input::placeholder {
+    color: rgba(255,255,255,0.4);
+}
+.f-newsletter input:focus {
+    border-color: rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.08);
+}
+.f-newsletter button {
+    background: #C8A04A;
+    color: #111;
+    font-weight: 500;
+    font-family: var(--f-body);
+    font-size: 13px;
+    border: none;
+    border-radius: 100px;
+    padding: 0 20px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+.f-newsletter button:hover {
+    opacity: 0.85;
+}
+/* Ensure logos in footer are crisp */
+.f-social-btn svg {
+    filter: none !important;
+}
+
+
+/* ─── MOBILE: hide custom cursor ─── */
+@media (max-width: 768px) {
+  .cursor-dot, .cursor-ring { display: none !important; }
+  body, a, button { cursor: auto; }
+}
