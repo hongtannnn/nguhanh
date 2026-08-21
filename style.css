@@ -985,3 +985,40 @@ body::before {
   .cursor-dot, .cursor-ring { display: none !important; }
   body, a, button { cursor: auto; }
 }
+
+
+/* ─── RESPONSIVE FIXES ─── */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+.hero-h1 em {
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .f-newsletter form {
+    flex-direction: column;
+  }
+  .f-newsletter input, .f-newsletter button {
+    width: 100%;
+    text-align: center;
+  }
+  .f-newsletter button {
+    padding: 12px 20px; /* Better touch target */
+  }
+}
+
+/* Ensure emotion grid is nicely stacked on small screens */
+@media (max-width: 640px) {
+  .emotion-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  /* The last item will span 2 columns to center it since there are 5 items */
+  .emotion-grid .emotion-btn:last-child {
+    grid-column: span 2;
+    max-width: 50%;
+    margin: 0 auto;
+  }
+}
