@@ -194,8 +194,10 @@
     function updatePill(tab) {
       const r    = tab.getBoundingClientRect();
       const pr   = hanhTabs.getBoundingClientRect();
-      pill.style.left  = (r.left - pr.left) + 'px';
-      pill.style.width = r.width + 'px';
+      pill.style.left   = (r.left - pr.left) + 'px';
+      pill.style.top    = (r.top - pr.top) + 'px';
+      pill.style.width  = r.width + 'px';
+      pill.style.height = r.height + 'px';
       const h = tab.dataset.h;
       if (h && hanhColors[h]) pill.style.background = hanhColors[h];
     }

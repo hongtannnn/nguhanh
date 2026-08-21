@@ -213,11 +213,12 @@ a, button, [role="button"], label, select, input, textarea { cursor: none; }
 .hanh-tab-pill {
   position: absolute;
   top: 0; left: 0;
-  height: 100%;
   background: var(--green-dark);
   border-radius: 100px;
   transition: left 0.45s cubic-bezier(0.23,1,0.32,1),
+              top 0.45s cubic-bezier(0.23,1,0.32,1),
               width 0.45s cubic-bezier(0.23,1,0.32,1),
+              height 0.45s cubic-bezier(0.23,1,0.32,1),
               background 0.4s;
   pointer-events: none;
   z-index: 0;
